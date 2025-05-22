@@ -1,6 +1,5 @@
-@extends("layouts.app")
-@section('title', 'Admin')
+@extends('layouts.app')
+@section('title', 'admin')
 @section('content')
-    
-<h1>Admin</h1>
+    <h1>admin</h1>    
 @endsection

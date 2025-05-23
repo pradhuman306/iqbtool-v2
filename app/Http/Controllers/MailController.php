@@ -7,6 +7,50 @@ use Illuminate\Support\Facades\File;
 
 class MailController extends Controller
 {
+     // Handle form submission
+    public function submitForm(Request $request)
+    {
+     $request->validate([
+            'full_name'    => 'required|string|max:255',
+            'email'   => 'required|email',
+            'message' => 'required|string',
+        ], [
+            'required' => 'The :attribute field is required.',
+        ], [
+            'full_name'    => 'Name',
+            'email'   => 'Email Address',
+            'message' => 'Message',
+        ]);
+
+        // Collect data
+        $full_name    = $request->input('full_name');
+        $email   = $request->input('email');
+        $subject = 'Contact Form Submission'; // You can customize this
+        $message = $request->input('message');
+
+        // Prepare email content
+        $to      = 'nextigehosting@gmail.com'; // Change to your desired recipient
+        $headers = "From: $email\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+        $body = "You have received a new message from your website contact form.\n\n";
+        $body .= "Full Name: $full_name\n";
+        $body .= "Email: $email\n";
+        // $body .= "Subject: $subject\n";
+        $body .= "Message: $message\n";
+
+           try {
+            // Attempt to send email using mail()
+            if (!mail($to, $subject, $body, $headers)) {
+                throw new \Exception('mail() failed.');
+            }
+            return back()->with('success', 'Message sent successfully!');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Failed to send message. Please try again later.');
+        }
+    }
+
     public function sendEmail(Request $request)
     {
         

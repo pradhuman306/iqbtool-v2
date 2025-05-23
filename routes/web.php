@@ -4,7 +4,7 @@ use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en','nl'])) {
+    if (in_array($locale, ['en', 'nl'])) {
         session(['locale' => $locale]);
     }
     return redirect()->back();
@@ -14,31 +14,33 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
-
 Route::get('/fml-kfml', function () {
     return view('fml-kfml');
-});
+})->name('fml-kfml');
+
 Route::get('/custom-form', function () {
     return view('custom-form');
-});
+})->name('custom-form');
+
 Route::get('/pricing', function () {
     return view('pricing');
-});
+})->name('pricing');
 
 Route::get('/contact-us', function () {
     return view('contact');
-});
-// Admin interface
-Route::get('/admin', function () {
-    return view('admin');
-});
-Route::post('/email-message', [MailController::class, 'sendEmail'])->name('email-message');
+})->name('contact-us');
 
-Route::post('/admin/save', function () {
-    $newData = request()->all();
-    file_put_contents(resource_path('data/content.json'), json_encode($newData, JSON_PRETTY_PRINT));
-    return redirect('/admin');
-});
+Route::get('/terms-and-conditions', function () {
+    return view('terms-and-conditions');
+})->name('terms-and-conditions');
+
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/cookie-policy', function () {
+    return view('cookie-policy');
+})->name('cookie-policy');
+
+// mail submit route 
+Route::post('/contact', [MailController::class, 'submitForm'])->name('contact.submit');

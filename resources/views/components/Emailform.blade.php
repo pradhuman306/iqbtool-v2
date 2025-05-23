@@ -1,4 +1,4 @@
-<form method="POST" action="/email-message">
+<form method="POST" action="{{ route('contact.submit') }}">
     @csrf
     <div>
         <p>

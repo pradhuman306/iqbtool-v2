@@ -4,7 +4,7 @@
         <div class="header-wrapper">
             <div class="header-items-left">
                 <div class="site-branding">
-                    <a href="/" class="custom-logo-link" rel="home" aria-current="page">
+                    <a href="{{ route('home') }}" class="custom-logo-link" rel="home" aria-current="page">
                         <img src="{{ asset('assets/images/logo.svg') }}" class="custom-logo" alt="IQB Logo">
                     </a>
                 </div><!-- .site-branding -->
@@ -22,24 +22,24 @@
                     <div class="menu-primary-menu-container">
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="/">{{ __('Home') }}</a>
+                                <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="footer-none menu-item menu-item-has-children">
                                 <a>{{ __('Forms') }}</a>
                                 <ul class="sub-menu">
                                     <li class="icon-fml menu-item">
-                                        <a href="/fml-kfml/">FML/KFML</a>
+                                        <a href="{{ route('fml-kfml') }}">FML/KFML</a>
                                     </li>
                                     <li class="icon-custom-form menu-item">
-                                        <a href="/custom-form/">{{ __('Custom Form') }}</a>
+                                        <a href="{{ route('custom-form') }}">{{ __('Custom Form') }}</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="menu-item">
-                                <a href="/pricing/">{{ __('Pricing') }}</a>
+                                <a href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
                             </li>
                             <li class="menu-item">
-                                <a href="/contact-us/">{{ __('Contact') }}</a>
+                                <a href="{{ route('contact-us') }}">{{ __('Contact') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -81,24 +81,24 @@
                     <div class="menu-primary-menu-container">
                        <ul class="menu">
                             <li class="menu-item">
-                                <a href="/">{{ __('Home') }}</a>
+                                <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="footer-none menu-item menu-item-has-children">
                                 <a>{{ __('Forms') }}</a>
                                 <ul class="sub-menu">
                                     <li class="icon-fml menu-item">
-                                        <a href="/fml-kfml/">FML/KFML</a>
+                                        <a href="{{ route('fml-kfml') }}">FML/KFML</a>
                                     </li>
                                     <li class="icon-custom-form menu-item">
-                                        <a href="/custom-form/">{{ __('Custom Form') }}</a>
+                                        <a href="{{ route('custom-form') }}">{{ __('Custom Form') }}</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="menu-item">
-                                <a href="/pricing/">{{ __('Pricing') }}</a>
+                                <a href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
                             </li>
                             <li class="menu-item">
-                                <a href="/contact-us/">{{ __('Contact') }}</a>
+                                <a href="{{ route('contact-us') }}">{{ __('Contact') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -106,14 +106,12 @@
                 <div class="language-wrap">
                     <a class="btn-login" target="_blank" href="1">{{ __('Login') }}</a>
                     <ul class="iqb-lang-switcher">
-                        <li>
-                            <a href="javascript:void(0)"
-                                class="trp-ls-shortcode-disabled-language trp-ls-disabled-language" title="Dutch"
-                                onclick="event.preventDefault()">NL</a>
-                        </li>
-                        <li>
-                            <a href="/" title="English">EN</a>
-                        </li>
+                         <li>
+                        <a href="{{ route('lang.switch', 'nl') }}" class="trp-ls-shortcode-disabled-language trp-ls-disabled-language" title="Dutch">NL</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('lang.switch', 'en') }}" title="English">EN</a>
+                    </li>
                     </ul>
                 </div>
             </div>

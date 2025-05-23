@@ -18,7 +18,7 @@
         <div class="container">
             <div class="iqb-footer-body row">
                 <div class="iqb-footer-logo">
-                    <a href="/" class="custom-logo-link" rel="home" aria-current="page">
+                    <a href="{{ route('home') }}" class="custom-logo-link" rel="home" aria-current="page">
                         <img src="{{ asset('assets/images/logo.svg') }}" class="custom-logo" alt="IQB Logo">
                     </a>
                     <p>{{ __('IQB Tool – More with Less | Quick and easy') }}</p>
@@ -28,24 +28,24 @@
                     <div class="menu-primary-menu-container">
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="/">{{ __('Home') }}</a>
+                                <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="footer-none menu-item menu-item-has-children">
                                 <a>{{ __('Forms') }}</a>
                                 <ul class="sub-menu">
                                     <li class="icon-fml menu-item">
-                                        <a href="/fml-kfml/">FML/KFML</a>
+                                        <a href="{{ route('fml-kfml') }}">FML/KFML</a>
                                     </li>
                                     <li class="icon-custom-form menu-item">
-                                        <a href="/custom-form/">{{ __('Custom Form') }}</a>
+                                        <a href="{{ route('custom-form') }}">{{ __('Custom Form') }}</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="menu-item">
-                                <a href="/pricing/">{{ __('Pricing') }}</a>
+                                <a href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
                             </li>
                             <li class="menu-item">
-                                <a href="/contact-us/">{{ __('Contact') }}</a>
+                                <a href="{{ route('contact-us') }}">{{ __('Contact') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -55,13 +55,13 @@
                     <div class="menu-footer-menu-container">
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="/terms-and-conditions/">{{ __('Terms and Conditions') }}</a>
+                                <a href="{{ route('terms-and-conditions') }}">{{ __('Terms and Conditions') }}</a>
                             </li>
                             <li class="menu-item">
-                                <a href="/privacy-policy/">{{ __('Privacy Policy') }}</a>
+                                <a href="{{ route('privacy-policy') }}">{{ __('Privacy Policy') }}</a>
                             </li>
                             <li class="menu-item">
-                                <a href="/cookie-policy/">{{ __('Cookie Policy') }}</a>
+                                <a href="{{ route('cookie-policy') }}">{{ __('Cookie Policy') }}</a>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="iqb-footer-foot row">
                 <div class="iqb-footer-foot-left">
-                    © 2025 <a href="/">IQB Tool</a>
+                    © 2025 <a href="{{ route('home') }}">IQB Tool</a>
                     {{ __("All rights reserved") }}
                 </div>
                 <div class="iqb-footer-foot-right">

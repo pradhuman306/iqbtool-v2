@@ -38,6 +38,24 @@
                                 <div class="iqb-contact-inner-wrapper">
                                     <div class="wpcf7 no-js" id="wpcf7-f257-o1" lang="en-US" dir="ltr" data-wpcf7-id="257">
                                        @include('components.Emailform')
+
+                                        <div class="screen-reader-response">
+                                                @if(session('success'))
+                                                    <p style="color:green;">{{ session('success') }}</p>
+                                                @endif
+
+                                                @if(session('error'))
+                                                    <p style="color:red;">{{ session('error') }}</p>
+                                                @endif
+
+                                                @if ($errors->any())
+                                                 <ul style="color:red;">
+                                                    @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                                @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>

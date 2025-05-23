@@ -72,10 +72,10 @@
 	padding: 0;
 }
 
-body,
+/* body,
 html {
 	height: 100%;
-}
+} */
 
 body {
 	color: var(--color-text);
@@ -1229,11 +1229,11 @@ span.wpcf7-form-control-wrap {
 	padding-left: 30px;
 }
 
-.page-template-default .post-322.type-page .entry-content h3+p {
+.page-template-default .type-page .entry-content h3+p {
 	padding-bottom: 15px;
 }
 
-.page-template-default .post-322.type-page .entry-content p+p {
+.page-template-default .type-page .entry-content p+p {
 	padding: 10px 0;
 }
 

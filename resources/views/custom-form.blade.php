@@ -1,5 +1,5 @@
 @extends("layouts.app")
-<!-- @section('title', 'Admin') -->
+@section('title', 'Custom Form')
 @section('content')
     <section class="gradient-inner">
         <div class="container">

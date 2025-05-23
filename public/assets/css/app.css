@@ -163,6 +163,7 @@ section {
 	padding: 4px 9px;
 	transition: all .4s;
 	width: auto;
+	text-transform: uppercase;
 }
 
 .iqb-lang-switcher li a.trp-ls-shortcode-disabled-language {

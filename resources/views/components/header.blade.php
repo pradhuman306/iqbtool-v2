@@ -10,10 +10,19 @@
                 </div><!-- .site-branding -->
                 <ul class="iqb-lang-switcher">
                     <li>
-                        <a href="{{ route('lang.switch', 'nl') }}" class="trp-ls-shortcode-disabled-language trp-ls-disabled-language" title="Dutch">NL</a>
+                        <a href="{{ route('lang.switch', session('locale')) }}"
+                            class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
+                            title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
+                            {{ session('locale') }}
+                        </a>
                     </li>
                     <li>
-                        <a href="{{ route('lang.switch', 'en') }}" title="English">EN</a>
+                        @php
+                            $switchTo = session('locale') === 'en' ? 'nl' : 'en';
+                        @endphp
+                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'en' ? 'English' : 'Dutch' }}">
+                            {{ $switchTo }}
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -48,10 +57,11 @@
             <div class="header-items-right">
                 <ul class="auth-btns">
                     <li>
-                        <a class="btn-login" target="_blank" href="/">{{ __('Login') }}</a>
+                        <a class="btn-login" target="_blank" href="https://login.iqb-tool.com/">{{ __('Login') }}</a>
                     </li>
                     <li>
-                        <a class="btn btn-small btn-primary btn-register" target="_blank" href="/">{{ __('Try for access') }}</a>
+                        <a class="btn btn-small btn-primary btn-register" target="_blank"
+                            href="https://login.iqb-tool.com/request-access">{{ __('Try for access') }}</a>
                     </li>
                 </ul>
                 <div class="sideToggle">
@@ -79,7 +89,7 @@
             <div class="res-nav-wrap">
                 <nav class="main-navigation">
                     <div class="menu-primary-menu-container">
-                       <ul class="menu">
+                        <ul class="menu">
                             <li class="menu-item">
                                 <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
@@ -104,13 +114,22 @@
                     </div>
                 </nav>
                 <div class="language-wrap">
-                    <a class="btn-login" target="_blank" href="1">{{ __('Login') }}</a>
+                    <a class="btn-login" target="_blank" href="https://login.iqb-tool.com/">{{ __('Login') }}</a>
                     <ul class="iqb-lang-switcher">
                          <li>
-                        <a href="{{ route('lang.switch', 'nl') }}" class="trp-ls-shortcode-disabled-language trp-ls-disabled-language" title="Dutch">NL</a>
+                        <a href="{{ route('lang.switch', session('locale')) }}"
+                            class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
+                            title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
+                            {{ session('locale') }}
+                        </a>
                     </li>
                     <li>
-                        <a href="{{ route('lang.switch', 'en') }}" title="English">EN</a>
+                        @php
+                            $switchTo = session('locale') === 'en' ? 'nl' : 'en';
+                        @endphp
+                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'en' ? 'English' : 'Dutch' }}">
+                            {{ $switchTo }}
+                        </a>
                     </li>
                     </ul>
                 </div>

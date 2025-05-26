@@ -31,24 +31,24 @@
                 <nav class="main-navigation">
                     <div class="menu-primary-menu-container">
                         <ul class="menu">
-                            <li class="menu-item">
+                            <li class="menu-item {{ request()->routeIs('home') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
-                            <li class="footer-none menu-item menu-item-has-children">
+                            <li class="footer-none menu-item menu-item-has-children  {{ request()->routeIs('fml-kfml', 'custom-form') ? 'current-menu-item' : '' }}">
                                 <a>{{ __('Forms') }}</a>
                                 <ul class="sub-menu">
-                                    <li class="icon-fml menu-item">
+                                    <li class="icon-fml menu-item {{ request()->routeIs('fml-kfml') ? 'current-menu-item' : '' }}">
                                         <a href="{{ route('fml-kfml') }}">FML/KFML</a>
                                     </li>
-                                    <li class="icon-custom-form menu-item">
+                                    <li class="icon-custom-form menu-item {{ request()->routeIs('custom-form') ? 'current-menu-item' : '' }}">
                                         <a href="{{ route('custom-form') }}">{{ __('Custom Form') }}</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item {{ request()->routeIs('pricing') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item {{ request()->routeIs('contact-us') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('contact-us') }}">{{ __('Contact') }}</a>
                             </li>
                         </ul>
@@ -91,24 +91,24 @@
                 <nav class="main-navigation">
                     <div class="menu-primary-menu-container">
                         <ul class="menu">
-                            <li class="menu-item">
+                            <li class="menu-item {{ request()->routeIs('home') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
-                            <li class="footer-none menu-item menu-item-has-children">
+                            <li class="footer-none menu-item menu-item-has-children {{ request()->routeIs('fml-kfml', 'custom-form') ? 'current-menu-item' : '' }}">
                                 <a>{{ __('Forms') }}</a>
                                 <ul class="sub-menu">
-                                    <li class="icon-fml menu-item">
+                                    <li class="icon-fml menu-item {{ request()->routeIs('fml-kfml') ? 'current-menu-item' : '' }}">
                                         <a href="{{ route('fml-kfml') }}">FML/KFML</a>
                                     </li>
-                                    <li class="icon-custom-form menu-item">
+                                    <li class="icon-custom-form menu-item {{ request()->routeIs('custom-form') ? 'current-menu-item' : '' }}">
                                         <a href="{{ route('custom-form') }}">{{ __('Custom Form') }}</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item {{ request()->routeIs('pricing') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item {{ request()->routeIs('contact-us') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('contact-us') }}">{{ __('Contact') }}</a>
                             </li>
                         </ul>

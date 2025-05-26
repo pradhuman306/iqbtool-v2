@@ -8,23 +8,24 @@
                         <img src="{{ asset('assets/images/logo.svg') }}" class="custom-logo" alt="IQB Logo">
                     </a>
                 </div><!-- .site-branding -->
-                <ul class="iqb-lang-switcher">
+               <ul class="iqb-lang-switcher">
                     <li>
-                        <a href="{{ route('lang.switch', ['locale' => session('locale', 'nl')]) }}"
+                        <a href="{{ route('lang.switch', session('locale', 'nl') === 'en' ? 'eng' : 'nl') }}"
                             class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
                             title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
-                                {{ session('locale', 'nl') }}
+                                {{ session('locale') === 'en' ? 'EN' : 'NL' }}
                         </a>
                     </li>
                     <li>
                         @php
-                            $switchTo = session('locale') === 'en' ? 'nl' : 'en';
+                            $switchTo = session('locale') === 'en' ? 'nl' : 'eng';
                         @endphp
-                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'en' ? 'English' : 'Dutch' }}">
-                            {{ $switchTo }}
+                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'eng' ? 'English' : 'Dutch' }}">
+                            {{ $switchTo === 'eng' ? 'EN' : 'NL' }}
                         </a>
                     </li>
                 </ul>
+
             </div>
             <div class="header-items-middle">
                 <nav class="main-navigation">
@@ -115,23 +116,24 @@
                 </nav>
                 <div class="language-wrap">
                     <a class="btn-login" target="_blank" href="https://login.iqb-tool.com/">{{ __('Login') }}</a>
-                    <ul class="iqb-lang-switcher">
-                         <li>
-                        <a href="{{ route('lang.switch', ['locale' => session('locale', 'nl')]) }}"
+               <ul class="iqb-lang-switcher">
+                    <li>
+                        <a href="{{ route('lang.switch', session('locale', 'nl') === 'en' ? 'eng' : 'nl') }}"
                             class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
                             title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
-                            {{ session('locale', 'nl') }}
+                                {{ session('locale') === 'en' ? 'EN' : 'NL' }}
                         </a>
                     </li>
                     <li>
                         @php
-                            $switchTo = session('locale') === 'en' ? 'nl' : 'en';
+                            $switchTo = session('locale') === 'en' ? 'nl' : 'eng';
                         @endphp
-                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'en' ? 'English' : 'Dutch' }}">
-                            {{ $switchTo }}
+                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'eng' ? 'English' : 'Dutch' }}">
+                            {{ $switchTo === 'eng' ? 'EN' : 'NL' }}
                         </a>
                     </li>
                     </ul>
+
                 </div>
             </div>
         </div>

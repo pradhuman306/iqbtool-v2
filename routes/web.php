@@ -4,7 +4,10 @@ use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'nl'])) {
+    if (in_array($locale, ['en', 'nl','eng'])) {
+        if($locale == 'eng'){
+            $locale = 'en';
+        }
         session(['locale' => $locale]);
     }
     return redirect()->back();

@@ -10,10 +10,10 @@
                 </div><!-- .site-branding -->
                 <ul class="iqb-lang-switcher">
                     <li>
-                        <a href="{{ route('lang.switch', session('locale')) }}"
+                        <a href="{{ route('lang.switch', ['locale' => session('locale', 'nl')]) }}"
                             class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
                             title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
-                            {{ session('locale') }}
+                                {{ session('locale', 'nl') }}
                         </a>
                     </li>
                     <li>
@@ -117,10 +117,10 @@
                     <a class="btn-login" target="_blank" href="https://login.iqb-tool.com/">{{ __('Login') }}</a>
                     <ul class="iqb-lang-switcher">
                          <li>
-                        <a href="{{ route('lang.switch', session('locale')) }}"
+                        <a href="{{ route('lang.switch', ['locale' => session('locale', 'nl')]) }}"
                             class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
                             title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
-                            {{ session('locale') }}
+                            {{ session('locale', 'nl') }}
                         </a>
                     </li>
                     <li>

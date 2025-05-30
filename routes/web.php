@@ -57,10 +57,8 @@ Route::post('/contact', [MailController::class, 'submitForm'])->name('contact.su
 
 // auth 
 
-Route::get('/admin', function () {
-    return view('login');
-})->name('login');
-
+Route::get('/admin', [AuthController::class, 'index'])->name('login');
+Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 
 

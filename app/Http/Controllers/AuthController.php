@@ -9,6 +9,17 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+
+    public function index(Request $request)
+    {
+        if (Auth::check()) {
+            return redirect('/admin/edit');
+        }
+
+        return view('login');
+
+    }
+
     // Login method
  public function login(Request $request)
 {

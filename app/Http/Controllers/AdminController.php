@@ -54,7 +54,9 @@ class AdminController extends Controller
     // Save to file
     file_put_contents($filePath, $updatedJson);
 
-    return redirect('/dashboard')->with('success', 'Content updated successfully!');
+        return back()->with('success', 'Content updated successfully!');
+
+
     }
 
 }

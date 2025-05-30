@@ -9,7 +9,7 @@
     <form method="POST" action="{{ route('submit.form') }}">
         @csrf
         <label for="key">Name:</label>
-        <input type="text" name="data[px_name]" value="<?= $data['px_name']; ?>" required>
+        <input type="text" name="data[px name]" value="<?= $data['px name']; ?>" required>
         <br><br>
 
         <label for="value">label:</label>

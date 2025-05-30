@@ -13,6 +13,14 @@ Route::get('lang/{locale}', function ($locale) {
     return redirect()->back();
 })->name('lang.switch');
 
+Route::get('/admin', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/forgot-password', function () {
+    return view('forgot');
+})->name('forgot');
+
 Route::get('/', function () {
     return view('home');
 })->name('home');

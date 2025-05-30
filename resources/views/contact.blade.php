@@ -3,13 +3,13 @@
 @section('content')
     <div class="gradient-inner">
         <div class="container">
-            <div class="iqb-section-header iqb-page-head animate" data-animate="fade-up">
+            <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
                 <label class="iqb-label">{{ __('Contact') }}</label>
                 <h1 id="page-title">{{ __('Get in touch with us') }}</h1>
                 <p>{{ __('Get in touch Description') }}</p>
             </div>
             <!-- Contact Us Section Starts -->
-            <div class="iqb-contact animate" data-animate="fade-up">
+            <section class="iqb-contact" data-animate="fade-up">
                 <div class="iqb-contact-wrapper">
                     <div class="iqb-contact-body">
                         <div class="iqb-contact-content row align-center justify-between">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- Contact Us Section Ends -->
         </div>
     </div>

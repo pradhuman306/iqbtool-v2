@@ -1,14 +1,14 @@
 @extends("layouts.app")
 @section('title', 'Pricing')
 @section('content')
-<section class="gradient-inner">
+<div class="gradient-inner">
     <div class="container">
-        <div class="iqb-section-header iqb-page-head animate" data-animate="fade-up">
+        <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
             <label class="iqb-label">{{ __('Pricing') }}</label>
             <h1 id="page-title">{{ __('Simple and transparent pricing') }}</h1>
             <p>{{ __('Pricing Description') }}</p>
         </div>
-        <div data-animate="fade-up" class="animate">
+        <div data-animate="fade-up">
             <div class="pricing-toggle-wrap">
                 <div class="toggle-container">
                     <input type="radio" data-duration="month" id="monthly" name="plans" value="Maandelijks">
@@ -113,5 +113,5 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 @endsection

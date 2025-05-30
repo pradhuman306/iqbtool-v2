@@ -1,4 +1,4 @@
-<footer class="site-footer iqb-footer animate">
+<footer class="site-footer iqb-footer" data-animate="fade-up">
     <div class="container">
         <div class="iqb-footer-up-wrapper">
             <div class="iqb-section-header iqb-footer-head">

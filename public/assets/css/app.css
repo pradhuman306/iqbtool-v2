@@ -1120,6 +1120,7 @@ main {
 }
 
 .iqb-contact-inner-wrapper form textarea {
+	height: 120px;
 	max-height: 120px;
 }
 
@@ -1438,7 +1439,7 @@ input[type="radio"] {
 	left: 50%;
 	width: 104px;
 	height: 45px;
-	background: url(/wp-content/uploads/2024/10/Vector-37.svg);
+	background: url(./../images/Vector-37.svg);
 	top: 70%;
 	transform: translateX(100px);
 }

@@ -1,9 +1,9 @@
 @extends("layouts.app")
 @section('title', 'Privacy Policy')
 @section('content')
-    <section class="gradient-inner page-template-default">
+    <div class="gradient-inner page-template-default">
         <div class="container">
-            <div class="iqb-section-header iqb-page-head animate" data-animate="fade-up">
+            <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
                 <label class="iqb-label">Your Privacy Matters</label>
                 <h1 id="page-title">Privacy Policy</h1>
                 <p>This Privacy Policy outlines how we collect, use, and safeguard your information when you interact with
@@ -111,5 +111,5 @@
                     </div>
                 </article>
             </div>
-    </section>
+    </d>
 @endsection

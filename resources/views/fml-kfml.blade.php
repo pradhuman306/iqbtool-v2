@@ -1,16 +1,16 @@
 @extends("layouts.app")
 @section('title', 'FML/KFML')
 @section('content')
-    <section class="gradient-inner">
+    <div class="gradient-inner">
         <div class="container">
-            <div class="iqb-section-header iqb-page-head animate" data-animate="fade-up">
+            <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
                 <label class="iqb-label">FML/KFML</label>
                 <h1 id="page-title">{{ __('Smart forms tailored to your needs') }}</h1>
                 <p>{{ __('FMLKFML Description') }}</p>
             </div>
             <div class="iqb-solutions-body">
                 <div class="iqb-solutions-content row align-center justify-between">
-                    <div class="iqb-solutions-left col-2 animate" data-animate="fade-up">
+                    <div class="iqb-solutions-left col-2" data-animate="fade-up">
                         <h3>FML</h3>
                         <p>{{ __('FML Description') }}</p>
                             <a href="https://login.iqb-tool.com/request-access" class="btn btn-primary" target="_blank"
@@ -21,14 +21,14 @@
                                 </svg>
                             </a>
                     </div>
-                    <div class="iqb-solutions-right col-2 animate" data-animate="fade-up">
+                    <div class="iqb-solutions-right col-2" data-animate="fade-up">
                         <figure>
                               <img src="{{ asset('assets/images/fml5-nl.svg') }}" alt="fml5-nl" class="">
                         </figure>
                     </div>
                 </div>
                 <div class="iqb-solutions-content row align-center justify-between">
-                    <div class="iqb-solutions-left col-2 animate" data-animate="fade-up">
+                    <div class="iqb-solutions-left col-2" data-animate="fade-up">
                         <h3>KFML</h3>
                          <p>{{ __('KFML Description') }}</p>
                             <a href="https://login.iqb-tool.com/request-access" class="btn btn-primary" target="_blank"
@@ -39,7 +39,7 @@
                                 </svg>
                             </a>
                     </div>
-                    <div class="iqb-solutions-right col-2 animate" data-animate="fade-up">
+                    <div class="iqb-solutions-right col-2" data-animate="fade-up">
                         <figure>
                                   <img src="{{ asset('assets/images/fml4-nl.svg') }}" alt="fml4-nl" class="">
                         </figure>
@@ -47,6 +47,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 @endsection

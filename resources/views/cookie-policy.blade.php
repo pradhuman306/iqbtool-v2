@@ -1,9 +1,9 @@
 @extends("layouts.app")
 @section('title', 'Cookie Policy')
 @section('content')
-    <section class="gradient-inner page-template-default">
+    <div class="gradient-inner page-template-default">
         <div class="container">
-            <div class="iqb-section-header iqb-page-head animate" data-animate="fade-up">
+            <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
                 <label class="iqb-label">How We Use Cookies</label>
                 <h1 id="page-title">Cookie Policy</h1>
                 <p>We use cookies to make your experience smoother and more personalized. This Cookie Policy explains what
@@ -79,5 +79,5 @@
                     </div>
                 </article>
             </div>
-    </section>
+    </div>
 @endsection

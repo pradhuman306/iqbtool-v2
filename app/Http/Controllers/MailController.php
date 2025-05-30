@@ -53,7 +53,6 @@ class MailController extends Controller
 
     public function sendEmail(Request $request)
     {
-        
         $validated = $request->validate([
             'full_name' => 'required|string|max:255',
             'email'     => 'required|email',

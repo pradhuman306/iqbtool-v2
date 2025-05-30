@@ -5,7 +5,7 @@
 
 @section('content')
     <!-- Hero Section Starts -->
-    <section class="iqb-hero-banner animate">
+    <section class="iqb-hero-banner" data-animate="fade-up">
         <div class="container">
             <div class="iqb-hero-wrapper">
                 <div class="iqb-hero-left">
@@ -28,7 +28,7 @@
     </section>
     <!-- Hero Section Ends -->
     <!-- Our Solutions Section Starts -->
-    <section class="iqb-solutions animate" data-animate="fade-up">
+    <section class="iqb-solutions" data-animate="fade-up">
         <div class="container">
             <div class="iqb-solutions-wrapper gradient">
                 <div class="iqb-section-header iqb-solutions-head">
@@ -79,7 +79,7 @@
     </section>
     <!-- Our Solutions Section Ends -->
     <!-- IQB Tool Preview Section Starts -->
-    <section class="iqb-tool animate" data-animate="fade-up">
+    <section class="iqb-tool" data-animate="fade-up">
         <div class="container">
             <div class="iqb-tool-wrapper"
                 style="background-image: url('{{ asset('assets/images/iqb-tool-preview-bg.svg') }}');">
@@ -105,7 +105,7 @@
     </section>
     <!-- IQB Tool Preview Section Ends -->
     <!-- About IQB Section Starts -->
-    <section class="iqb-about animate" data-animate="fade-up">
+    <section class="iqb-about" data-animate="fade-up">
         <div class="container">
             <div class="iqb-about-wrapper">
                 <div class="iqb-section-header iqb-about-head">
@@ -136,7 +136,7 @@
     </section>
     <!-- About IQB Section Ends -->
     <!-- IQB Features Section Starts -->
-    <section class="iqb-features animate" data-animate="fade-up">
+    <section class="iqb-features" data-animate="fade-up">
         <div class="container">
             <div class="iqb-features-wrapper gradient">
                 <div class="iqb-section-header iqb-features-head">
@@ -175,7 +175,7 @@
     </section>
     <!-- IQB Features Section Ends -->
     <!-- IQB Testimonials Section Starts -->
-    <section class="iqb-testimonials animate" data-animate="fade-up">
+    <section class="iqb-testimonials" data-animate="fade-up">
         <div class="container">
             <div class="iqb-testimonials-wrapper">
                 <div class="iqb-section-header iqb-testimonials-head">
@@ -232,7 +232,7 @@
     </section>
     <!-- IQB Testimonials Section Ends -->
     <!-- IQB FAQ Section Starts -->
-    <section class="iqb-faqs animate" data-animate="fade-up">
+    <section class="iqb-faqs" data-animate="fade-up">
         <div class="container">
             <div class="iqb-faqs-wrapper gradient">
                 <div class="iqb-section-header iqb-faqs-head">

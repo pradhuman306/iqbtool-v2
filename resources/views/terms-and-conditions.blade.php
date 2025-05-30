@@ -1,9 +1,9 @@
 @extends("layouts.app")
 @section('title', 'Terms and Conditions')
 @section('content')
-    <section class="gradient-inner page-template-default">
+    <div class="gradient-inner page-template-default">
         <div class="container">
-            <div class="iqb-section-header iqb-page-head animate" data-animate="fade-up">
+            <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
                 <label class="iqb-label">Your Rights and Responsibilities</label>
                 <h1 id="page-title">Terms and Conditions</h1>
                 <p>These Terms and Conditions explain the rules you need to follow when using our services. Our goal is to
@@ -87,5 +87,5 @@
                     </div><!-- .entry-content -->
                 </article><!-- #post-322 -->
             </div>
-    </section>
+    </div>
 @endsection

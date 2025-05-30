@@ -1,12 +1,14 @@
 {
     "Home": "Home",
+    "px_name": "default px updated",
+    "px_label": "software developer 1",
+    "Logout": "Logout",
     "Forms": "Forms",
     "Custom Form": "Custom Form",
     "Pricing": "Pricing",
-    "Contact":"Contact",
+    "Contact": "Contact",
     "Login": "Login",
     "Try for access": "Try for access",
-
     "Get in touch": "Get in touch",
     "Let's start something great": "Let's start something great",
     "Use over 1000+ customers already with IQB": "Use over 1000+ customers already with IQB.",
@@ -21,37 +23,27 @@
     "All rights reserved": "All rights reserved.",
     "Built with": "Built with",
     "by": "by",
-
-
     "Achieve More with Less": "Achieve More with Less",
     "Smarter forms for busy professionals": "Smarter forms for busy professionals",
     "Maximize your productivity and reduce time wastage with our efficient solutions": "Maximize your productivity and reduce time wastage with our efficient solutions.",
     "Get started now": "Get started now",
-
-
     "Customizable fill-in lists": "Customizable fill-in lists",
     "Offering a range of forms to suit your needs": "Offering a range of forms to suit your needs",
     "Choose from our range of forms, designed to meet your specific needs": "Choose from our range of forms, designed to meet your specific needs.",
-
     "FML Description": "The FML is part of the CBBS, the claim assessment and assurance system of the UWV. This system is used by insurance physicians and occupational experts at the UWV for claim assessments under the disability laws in the Netherlands.",
-
-    "KFML Description": "The FML systematically indicates the extent, frequency, and/or working hours per day an employee is capable of. The employee's work capacity is compared to the demands of the job to assess whether the employee is suitable for the position.",
-
+    "KFML Description": "The FML systematically indicates the extent, frequency, and\/or working hours per day an employee is capable of. The employee's work capacity is compared to the demands of the job to assess whether the employee is suitable for the position.",
     "New Form Solutions": "New Form Solutions",
     "Contact us": "Contact us",
     "New Form Description": "Are you handling forms that require manual effort? Contact us to discover how IQB can streamline your process. Our solution effortlessly transforms forms into PDF or MS Word reports, automating your workflow and saving valuable time. Let's simplify your tasks together.",
-
     "About IQB Tool": "About IQB Tool",
     "Get acquainted with our IQB tool": "Get acquainted with our IQB tool",
     "About IQB Description": "IQB is a tool designed to simplify and streamline the process of creating professional and smart forms for busy professionals like you. We understand that your time is valuable, which is why we developed IQB as your optimal solution for creating smarter, more efficient forms. An example of an IQB form is the KFML form.",
-
-    "Your FML normal answers are already pre-filled": "Your FML <b>normal answers</b> are already <b>pre-filled</b>.",
-    "You can easily navigate back and forth between the sections of the FML": "You can easily <b>navigate</b> back and forth between the sections of the FML.",
-    "Did you make a mistake? Just fix it and regenerate the report again": "Did you make a mistake? Just fix it and <b>regenerate</b> the report again.",
-    "Compose an FML, proceed with a single click directly to a fully completed (K)FML, and generate the report": "Compose an FML, proceed with a <b>single click</b> directly to a fully completed (K)FML, and generate the report.",
-    "Complete a (K)FML in less than 10 minutes and save time for other enjoyable expertise": "Complete a (K)FML in less than <b>10 minutes</b> and save time for other enjoyable expertise.",
-    "You can request your own colours/style for the login and the FML report": "You can request your own <b>colours/style</b> for the <b>login and the FML report</b>.",
-
+    "Your FML normal answers are already pre-filled": "Your FML <b>normal answers<\/b> are already <b>pre-filled<\/b>.",
+    "You can easily navigate back and forth between the sections of the FML": "You can easily <b>navigate<\/b> back and forth between the sections of the FML.",
+    "Did you make a mistake? Just fix it and regenerate the report again": "Did you make a mistake? Just fix it and <b>regenerate<\/b> the report again.",
+    "Compose an FML, proceed with a single click directly to a fully completed (K)FML, and generate the report": "Compose an FML, proceed with a <b>single click<\/b> directly to a fully completed (K)FML, and generate the report.",
+    "Complete a (K)FML in less than 10 minutes and save time for other enjoyable expertise": "Complete a (K)FML in less than <b>10 minutes<\/b> and save time for other enjoyable expertise.",
+    "You can request your own colours\/style for the login and the FML report": "You can request your own <b>colours\/style<\/b> for the <b>login and the FML report<\/b>.",
     "Our Useful Features": "Our Useful Features",
     "Unveiling the core features of our IQB Tool": "Unveiling the core features of our IQB Tool",
     "Our Useful Features Description": "Please reach out to our team to discuss further and explore collaboration opportunities.",
@@ -59,53 +51,34 @@
     "Incorporating our unique house style, we present the following line": "Incorporating our unique house style, we present the following line.",
     "Experience the power of one-click: both an FML and a KFML combined": "Experience the power of one-click: both an FML and a KFML combined.",
     "Save time, using our intelligent questionnaire builder features": "Save time, using our intelligent questionnaire builder features.",
-
     "Testimonials": "Testimonials",
     "Our goal is to help hospitals create their own questionnaire set": "Our goal is to help hospitals create their own questionnaire set",
     "Testimonials Description": "Choose from our wide array of forms, meticulously designed to meet your specific needs and ensure a seamless fit.",
-
     "We are purchasing multiple licenses to quickly and efficiently generate reports in our corporate style within a busy market": "We are purchasing multiple licenses to quickly and efficiently generate reports in our corporate style within a busy market.",
     "Insurance Medical Experts": "Insurance Medical Experts",
     "Organization of Insurance medical experts": "Organization of Insurance medical experts",
-
     "Very convenient for quickly navigating through a (K)FML and compiling it": "Very convenient for quickly navigating through a (K)FML and compiling it.",
     "Freelance Occupational Physician": "Freelance Occupational Physician",
-
     "Through IQB, I have been using KFML since version 4, and compiling these reports has now become very simple": "Through IQB, I have been using KFML since version 4, and compiling these reports has now become very simple.",
-
     "FAQs": "FAQs",
     "Unanswered questions that may pique your interest": "Unanswered questions that may pique your interest",
     "FAQs Description": "Whether you're looking for more details about the tool's features or need help troubleshooting, you'll find everything you need to get the most out of IQB Tool right here.",
-
     "How can I analyze the data I submitted through my questionnaire form": "How can I analyze the data I submitted through my questionnaire form?",
     "You can analyze your data using IQB Tool’s analytics dashboard, which provides detailed insights and allows you to export and visualize responses. For deeper analysis, data export options are available": "You can analyze your data using IQB Tool’s analytics dashboard, which provides detailed insights and allows you to export and visualize responses. For deeper analysis, data export options are available.",
-
     "How do I customize my form": "How do I customize my form?",
     "Easily customize your form with our drag-and-drop editor. Modify design, fields, and settings like conditional logic, or add custom CSS for advanced customization": "Easily customize your form with our drag-and-drop editor. Modify design, fields, and settings like conditional logic, or add custom CSS for advanced customization.",
-
     "Why would someone use a questionnaire form": "Why would someone use a questionnaire form?",
-    "Questionnaire forms are ideal for gathering structured data, such as feedback or registrations. IQB Tool simplifies the process with smart forms that are easy to create and personalize": "Questionnaire forms are ideal for gathering structured data, such as feedback or registrations. IQB Tool simplifies the process with smart forms that are easy to create and personalize.", 
-
+    "Questionnaire forms are ideal for gathering structured data, such as feedback or registrations. IQB Tool simplifies the process with smart forms that are easy to create and personalize": "Questionnaire forms are ideal for gathering structured data, such as feedback or registrations. IQB Tool simplifies the process with smart forms that are easy to create and personalize.",
     "What occurs when I surpass the monthly submission threshold": "What occurs when I surpass the monthly submission threshold?",
     "Exceeding the submission limit? Don’t worry—extra submissions are securely stored, and you can access them by upgrading your plan": "Exceeding the submission limit? Don’t worry—extra submissions are securely stored, and you can access them by upgrading your plan.",
-
     "What is IQB tool": "What is IQB tool?",
     "IQB is a tool designed to simplify and streamline the process of creating professional and smart forms for busy professionals like you. We understand that your time is valuable, which is why we developed IQB as your optimal solution for creating smarter, more efficient forms. An example of an IQB form is the KFML form": "IQB is a tool designed to simplify and streamline the process of creating professional and smart forms for busy professionals like you. We understand that your time is valuable, which is why we developed IQB as your optimal solution for creating smarter, more efficient forms. An example of an IQB form is the KFML form.",
-
     "Get more info": "Get more info",
-
-
-
     "Smart forms tailored to your needs": "Smart forms tailored to your needs",
     "FMLKFML Description": "Choose from our thoughtfully designed forms, crafted to meet your specific requirements and ensure a seamless fit.",
-
-
-
     "Customizable Form Solutions": "Customizable Form Solutions",
     "We offer tailored forms just for you": "We offer tailored forms just for you",
     "Customizable Form Description": "Share your needs with us, and we’ll craft the perfect form solution to fit your vision!",
-
-
     "Simple and transparent pricing": "Simple and transparent pricing",
     "Pricing Description": "Price that follow the growth of your business, so you will never be paying more you need.",
     "Monthly": "Monthly",
@@ -113,7 +86,6 @@
     "Get 1 month extra": "Get 1 month extra",
     "Month": "Month",
     "Year": "Year",
-
     "Trial": "Trial",
     "Enjoy the ease of creating your own (K)FML": "Enjoy the ease of creating your own (K)FML.",
     "Choose Trial": "Choose Trial",
@@ -121,37 +93,30 @@
     "Access basic form & limited questionnaire features": "Access basic form & limited questionnaire features",
     "Email support for essential queries": "Email support for essential queries",
     "Fair use policy applies": "Fair use policy applies",
-
     "Most Popular": "Most Popular",
-    "SP/Personal": "SP/Personal",
+    "SP\/Personal": "SP\/Personal",
     "Ideal for those who frequently create (K)FMLs": "Ideal for those who frequently create (K)FMLs.",
     "regularly": "regularly",
     "Choose Personal": "Choose Personal",
     "Includes 1 (K)FML per month": "Includes 1 (K)FML per month",
     "Access advanced form and pro questionnaire features": "Access advanced form and pro questionnaire features",
     "Generate PDFs reports with your brand identify": "Generate PDFs reports with your brand identify",
-
     "Business": "Business",
     "For more than 2 users, contact us to explore your options": "For more than 2 users, contact us to explore your options.",
     "At least 2 users": "At least 2 users",
     "Unlimited (K)FML creation per month": "Unlimited (K)FML creation per month",
     "Priority email for essential queries": "Priority email for essential queries",
     "Advanced reporting and analytics": "Advanced reporting and analytics",
-
-
     "Custom": "Custom",
     "Only create a few (K)FMLs per quarter or year? Contact us for a custom quote": "Only create a few (K)FMLs per quarter or year? Contact us for a custom quote.",
     "One or multiple users": "One or multiple users",
     "Custom-built (K)FML solutions to match your requirements": "Custom-built (K)FML solutions to match your requirements",
     "Flexible access based on your usage": "Flexible access based on your usage",
     "Advanced form automation and integration options": "Advanced form automation and integration options",
-    "24/7 premium-ondersteuning": "24/7 premium-ondersteuning",
+    "24\/7 premium-ondersteuning": "24\/7 premium-ondersteuning",
     "Many more": "Many more...",
-
-
-
     "Get in touch with us": "Get in touch with us",
-    "Get in touch Description": "Discover for yourself what IQB can do for you and/or your organization.",
+    "Get in touch Description": "Discover for yourself what IQB can do for you and\/or your organization.",
     "Full Name": "Full Name",
     "Email Address": "Email Address",
     "Message": "Message",

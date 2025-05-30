@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'nl','eng'])) {
@@ -12,10 +14,6 @@ Route::get('lang/{locale}', function ($locale) {
     }
     return redirect()->back();
 })->name('lang.switch');
-
-Route::get('/admin', function () {
-    return view('login');
-})->name('login');
 
 Route::get('/forgot-password', function () {
     return view('forgot');
@@ -55,3 +53,25 @@ Route::get('/cookie-policy', function () {
 
 // mail submit route 
 Route::post('/contact', [MailController::class, 'submitForm'])->name('contact.submit');
+
+
+// auth 
+
+Route::get('/admin', function () {
+    return view('login');
+})->name('login');
+
+Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+
+
+// only for admins 
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/admin/edit', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    Route::post('/submit', [AdminController::class, 'submitForm'])->name('submit.form');
+
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+});
+

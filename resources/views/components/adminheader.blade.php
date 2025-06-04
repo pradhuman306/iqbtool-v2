@@ -1,5 +1,5 @@
 <div class="overlay"></div>
-<header id="masthead" class="site-header">
+<header id="masthead" class="site-header site-admin-header">
     <div class="container">
         <div class="header-wrapper">
             <div class="header-items-left">
@@ -8,65 +8,30 @@
                         <img src="{{ asset('assets/images/logo.svg') }}" class="custom-logo" alt="IQB Logo">
                     </a>
                 </div><!-- .site-branding -->
-               <ul class="iqb-lang-switcher">
+                <ul class="iqb-lang-switcher">
                     <li>
                         <a href="{{ route('lang.switch', session('locale', 'nl') === 'en' ? 'eng' : 'nl') }}"
                             class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
                             title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
-                                {{ session('locale') === 'en' ? 'EN' : 'NL' }}
+                            {{ session('locale') === 'en' ? 'EN' : 'NL' }}
                         </a>
                     </li>
                     <li>
                         @php
                             $switchTo = session('locale') === 'en' ? 'nl' : 'eng';
                         @endphp
-                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'eng' ? 'English' : 'Dutch' }}">
+                        <a href="{{ route('lang.switch', $switchTo) }}"
+                            title="{{ $switchTo === 'eng' ? 'English' : 'Dutch' }}">
                             {{ $switchTo === 'eng' ? 'EN' : 'NL' }}
                         </a>
                     </li>
                 </ul>
-
-            </div>
-            <div class="header-items-middle">
-                <nav class="main-navigation">
-                    <div class="menu-primary-menu-container">
-                        @php
-                            $currentPage = request()->query('page', 'home');
-                        @endphp
-
-                       <select onchange="if(this.value) window.location.href=this.value;">
-                            <!-- Home -->
-                            <option value="{{ route('home') }}/admin/edit?page=home" {{ $currentPage == 'home' ? 'selected' : '' }}>
-                                {{ __('Home') }}
-                            </option>
-
-                            <!-- Forms Group -->
-                            <optgroup label="{{ __('Forms')}}">
-                                <option value="{{ route('home') }}/admin/edit?page=fml-kfml" {{ $currentPage == 'fml-kfml' ? 'selected' : '' }}>
-                                    FML/KFML
-                                </option>
-                                <option value="{{ route('home') }}/admin/edit?page=custom-form" {{ $currentPage == 'custom-form' ? 'selected' : '' }}>
-                                    {{ __('Custom Form') }}
-                                </option>
-                            </optgroup>
-
-                            <!-- Pricing -->
-                            <option value="{{ route('home') }}/admin/edit?page=pricing" {{ $currentPage == 'pricing' ? 'selected' : '' }}>
-                                {{ __('Pricing') }}
-                            </option>
-
-                            <!-- Contact -->
-                            <option value="{{ route('home') }}/admin/edit?page=contact-us" {{ $currentPage == 'contact-us' ? 'selected' : '' }}>
-                                {{ __('Contact') }}
-                            </option>
-                        </select>
-
-
-                    </div>
-                </nav>
             </div>
             <div class="header-items-right">
-                   <ul class="auth-btns">
+                <ul class="auth-btns">
+                    <li>
+                         <button type="submit" class="btn btn-primary">Update</button>
+                    </li>
                     <li>
                         <a class="btn-login" href="{{ route('logout') }}">{{ __('Logout') }}</a>
                     </li>
@@ -100,13 +65,16 @@
                             <li class="menu-item {{ request()->routeIs('home') ? 'current-menu-item' : '' }}">
                                 <a href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
-                            <li class="footer-none menu-item menu-item-has-children {{ request()->routeIs('fml-kfml', 'custom-form') ? 'current-menu-item' : '' }}">
+                            <li
+                                class="footer-none menu-item menu-item-has-children {{ request()->routeIs('fml-kfml', 'custom-form') ? 'current-menu-item' : '' }}">
                                 <a>{{ __('Forms') }}</a>
                                 <ul class="sub-menu">
-                                    <li class="icon-fml menu-item {{ request()->routeIs('fml-kfml') ? 'current-menu-item' : '' }}">
+                                    <li
+                                        class="icon-fml menu-item {{ request()->routeIs('fml-kfml') ? 'current-menu-item' : '' }}">
                                         <a href="{{ route('fml-kfml') }}">FML/KFML</a>
                                     </li>
-                                    <li class="icon-custom-form menu-item {{ request()->routeIs('custom-form') ? 'current-menu-item' : '' }}">
+                                    <li
+                                        class="icon-custom-form menu-item {{ request()->routeIs('custom-form') ? 'current-menu-item' : '' }}">
                                         <a href="{{ route('custom-form') }}">{{ __('Custom Form') }}</a>
                                     </li>
                                 </ul>
@@ -122,24 +90,24 @@
                 </nav>
                 <div class="language-wrap">
                     <a class="btn-login" target="_blank" href="https://login.iqb-tool.com/">{{ __('Login') }}</a>
-               <ul class="iqb-lang-switcher">
-                    <li>
-                        <a href="{{ route('lang.switch', session('locale', 'nl') === 'en' ? 'eng' : 'nl') }}"
-                            class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
-                            title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
+                    <ul class="iqb-lang-switcher">
+                        <li>
+                            <a href="{{ route('lang.switch', session('locale', 'nl') === 'en' ? 'eng' : 'nl') }}"
+                                class="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
+                                title="{{ session('locale') === 'en' ? 'English' : 'Dutch' }}">
                                 {{ session('locale') === 'en' ? 'EN' : 'NL' }}
-                        </a>
-                    </li>
-                    <li>
-                        @php
-                            $switchTo = session('locale') === 'en' ? 'nl' : 'eng';
-                        @endphp
-                        <a href="{{ route('lang.switch', $switchTo) }}" title="{{ $switchTo === 'eng' ? 'English' : 'Dutch' }}">
-                            {{ $switchTo === 'eng' ? 'EN' : 'NL' }}
-                        </a>
-                    </li>
+                            </a>
+                        </li>
+                        <li>
+                            @php
+                                $switchTo = session('locale') === 'en' ? 'nl' : 'eng';
+                            @endphp
+                            <a href="{{ route('lang.switch', $switchTo) }}"
+                                title="{{ $switchTo === 'eng' ? 'English' : 'Dutch' }}">
+                                {{ $switchTo === 'eng' ? 'EN' : 'NL' }}
+                            </a>
+                        </li>
                     </ul>
-
                 </div>
             </div>
         </div>

@@ -7,19 +7,51 @@
             <div class="sidebar-wrap">
                 <div class="sidebar-body">
                     <div class="sidebar-nav-title">Pages</div>
-                    <ul>
-                        <li class="">
-                            <a href="/admin">
+                    @php
+                        $currentPage = request()->query('page', 'home');
+                    @endphp
+
+                    <ul class="nav-list">
+                        <!-- Home -->
+                        <li class="{{ $currentPage == 'home' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=home">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M6.25 8.125H2.5C2.33424 8.125 2.17527 8.19085 2.05806 8.30806C1.94085 8.42527 1.875 8.58424 1.875 8.75V12.5C1.875 12.6658 1.94085 12.8247 2.05806 12.9419C2.17527 13.0592 2.33424 13.125 2.5 13.125H6.25C6.41576 13.125 6.57473 13.0592 6.69194 12.9419C6.80915 12.8247 6.875 12.6658 6.875 12.5V8.75C6.875 8.58424 6.80915 8.42527 6.69194 8.30806C6.57473 8.19085 6.41576 8.125 6.25 8.125ZM5.625 11.875H3.125V9.375H5.625V11.875ZM12.5 1.875H8.75C8.58424 1.875 8.42527 1.94085 8.30806 2.05806C8.19085 2.17527 8.125 2.33424 8.125 2.5V6.25C8.125 6.41576 8.19085 6.57473 8.30806 6.69194C8.42527 6.80915 8.58424 6.875 8.75 6.875H12.5C12.6658 6.875 12.8247 6.80915 12.9419 6.69194C13.0592 6.57473 13.125 6.41576 13.125 6.25V2.5C13.125 2.33424 13.0592 2.17527 12.9419 2.05806C12.8247 1.94085 12.6658 1.875 12.5 1.875ZM11.875 5.625H9.375V3.125H11.875V5.625ZM12.5 10H11.25V8.75C11.25 8.58424 11.1842 8.42527 11.0669 8.30806C10.9497 8.19085 10.7908 8.125 10.625 8.125C10.4592 8.125 10.3003 8.19085 10.1831 8.30806C10.0658 8.42527 10 8.58424 10 8.75V10H8.75C8.58424 10 8.42527 10.0658 8.30806 10.1831C8.19085 10.3003 8.125 10.4592 8.125 10.625C8.125 10.7908 8.19085 10.9497 8.30806 11.0669C8.42527 11.1842 8.58424 11.25 8.75 11.25H10V12.5C10 12.6658 10.0658 12.8247 10.1831 12.9419C10.3003 13.0592 10.4592 13.125 10.625 13.125C10.7908 13.125 10.9497 13.0592 11.0669 12.9419C11.1842 12.8247 11.25 12.6658 11.25 12.5V11.25H12.5C12.6658 11.25 12.8247 11.1842 12.9419 11.0669C13.0592 10.9497 13.125 10.7908 13.125 10.625C13.125 10.4592 13.0592 10.3003 12.9419 10.1831C12.8247 10.0658 12.6658 10 12.5 10ZM6.25 1.875H2.5C2.33424 1.875 2.17527 1.94085 2.05806 2.05806C1.94085 2.17527 1.875 2.33424 1.875 2.5V6.25C1.875 6.41576 1.94085 6.57473 2.05806 6.69194C2.17527 6.80915 2.33424 6.875 2.5 6.875H6.25C6.41576 6.875 6.57473 6.80915 6.69194 6.69194C6.80915 6.57473 6.875 6.41576 6.875 6.25V2.5C6.875 2.33424 6.80915 2.17527 6.69194 2.05806C6.57473 1.94085 6.41576 1.875 6.25 1.875ZM5.625 5.625H3.125V3.125H5.625V5.625Z"
                                         fill="#0E0B3D"></path>
                                 </svg>
-                                <span>Home</span>
+                                <span>{{ __('Home') }}</span>
+                            </a>
+                        </li>
+
+                        <!-- Forms Group -->
+                        <li class="{{ $currentPage == 'fml-kfml' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=fml-kfml">
+                                <span>FML/KFML</span>
+                            </a>
+                        </li>
+                        <li class="{{ $currentPage == 'custom-form' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=custom-form">
+                                <span>{{ __('Custom Form') }}</span>
+                            </a>
+                        </li>
+
+                        <!-- Pricing -->
+                        <li class="{{ $currentPage == 'pricing' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=pricing">
+                                <span>{{ __('Pricing') }}</span>
+                            </a>
+                        </li>
+
+                        <!-- Contact -->
+                        <li class="{{ $currentPage == 'contact-us' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=contact">
+                                <span>{{ __('Contact') }}</span>
                             </a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </aside>
@@ -97,15 +129,20 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="data[hero_banner_image]">Hero Banner Image</label><br />
-                                                        <input type="file" name="data[hero_banner_image]" accept="image/*">
+                                                        <label for="hero-banner-upload">Hero Banner Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="hero-banner-upload"
+                                                                name="data[hero_banner_image]" accept="image/*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
-                                                        <img src="{{asset('/')}}<?= $data['hero_banner_image']; ?>"
-                                                            width="150" height="150" alt="">
+                                                        <img id="preview-hero"
+                                                            src="{{ asset('/') }}<?= $data['hero_banner_image']; ?>"
+                                                            class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -184,15 +221,20 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="data[fml_image]">FML Image</label><br />
-                                                        <input type="file" name="data[fml_image]" accept="image/*">
+                                                        <label for="fml-image-upload">FML Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="fml-image-upload" name="data[fml_image]"
+                                                                accept="image/*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
-                                                        <img src="{{asset('/')}}<?= $data['fml_image']; ?>" width="150"
-                                                            height="150" alt="">
+                                                        <img id="preview-fml"
+                                                            src="{{ asset('/') }}<?= $data['fml_image']; ?>"
+                                                            class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -236,15 +278,20 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="data[kfml_image]">KFML Image</label><br />
-                                                        <input type="file" name="data[kfml_image]" accept="image/*">
+                                                        <label for="kfml-image-upload">KFML Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="kfml-image-upload"
+                                                                name="data[kfml_image]" accept="image/*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
-                                                        <img src="{{asset('/')}}<?= $data['kfml_image']; ?>" width="150"
-                                                            height="150" alt="">
+                                                        <img id="preview-kfml"
+                                                            src="{{ asset('/') }}<?= $data['kfml_image']; ?>"
+                                                            class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -262,17 +309,21 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="data[form_solutions_background_image]">Form Solutions
-                                                            Background Image</label><br />
-                                                        <input type="file" name="data[form_solutions_background_image]"
-                                                            accept="image/*">
+                                                        <label for="form-solutions-image-upload">KFML Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="form-solutions-background-upload"
+                                                                name="data[form_solutions_background_image]"
+                                                                accept="image/*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
-                                                        <img src="{{asset('/')}}<?= $data['form_solutions_background_image']; ?>"
-                                                            width="150" height="150" alt="">
+                                                        <img id="preview-form-solutions-background"
+                                                            src="{{ asset('/') }}<?= $data['form_solutions_background_image']; ?>"
+                                                            class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -328,17 +379,21 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="data[form_solutions_image]">Form Solutions
+                                                        <label for="form-solutions-image-upload">Form Solutions
                                                             Image</label><br />
-                                                        <input type="file" name="data[form_solutions_image]"
-                                                            accept="image/*">
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="form-solutions-image-upload"
+                                                                name="data[form_solutions_image]" accept="image/*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
-                                                        <img src="{{asset('/')}}<?= $data['form_solutions_image']; ?>"
-                                                            width="150" height="150" alt="">
+                                                        <img id="preview-form-solutions-image"
+                                                            src="{{ asset('/') }}<?= $data['form_solutions_image']; ?>"
+                                                            class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -390,15 +445,21 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="data[about_iqb_image]">About IQB Image</label><br />
-                                                        <input type="file" name="data[about_iqb_image]" accept="image/*">
+                                                        <label for="form-solutions-image-upload">About IQB
+                                                            Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="about-iqb-image-upload"
+                                                                name="data[about_iqb_image]" accept="image/*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
-                                                        <img src="{{asset('/')}}<?= $data['about_iqb_image']; ?>"
-                                                            width="150" height="150" alt="">
+                                                        <img id="preview-about-iqb-image"
+                                                            src="{{ asset('/') }}<?= $data['about_iqb_image']; ?>"
+                                                            class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -446,18 +507,22 @@
                                                     <div class="row">
                                                         <div class="col-6">
                                                             <div class="form-group mb-3">
-                                                                <label for="data[useful_features_image]">Features Item
+                                                                <label for="form-solutions-image-upload">Features Item
                                                                     Image</label><br />
-                                                                <input type="file" name="data[useful_features_image]"
-                                                                    accept="image/*">
+                                                                <div class="upload-box">
+                                                                    <span>Click or drag image to upload</span>
+                                                                    <input type="file" id="useful-features-image-upload"
+                                                                        name="data[useful_features_image]"
+                                                                        accept="image/*" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="data[useful_features_image]">Preview
-                                                                    Image</label><br />
-                                                                <img src="{{asset('/')}}<?= $data['useful_features_image']; ?>"
-                                                                    width="150" height="150" alt="">
+                                                            <div class="form-group mb-3">
+                                                                <label>Preview Image</label><br />
+                                                                <img id="preview-useful_features-image"
+                                                                    src="{{ asset('/') }}<?= $data['useful_features_image']; ?>"
+                                                                    class="preview-img" alt="Image Preview" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -641,6 +706,32 @@
         if (document.querySelector('#editor1')) {
             const editor1 = new RichTextEditor("#editor1", editorConfig);
         }
+
+        function setupImagePreview(fileInputId, previewImageId) {
+            const input = document.getElementById(fileInputId);
+            const preview = document.getElementById(previewImageId);
+
+            input.addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function (evt) {
+                        preview.src = evt.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        // Setup previews for each input
+        setupImagePreview('hero-banner-upload', 'preview-hero');
+        setupImagePreview('fml-image-upload', 'preview-fml');
+        setupImagePreview('kfml-image-upload', 'preview-kfml');
+        setupImagePreview('form-solutions-background-upload', 'preview-form-solutions-background');
+        setupImagePreview('form-solutions-image-upload', 'preview-form-solutions-image');
+        setupImagePreview('about-iqb-image-upload', 'preview-about-iqb-image');
+        setupImagePreview('useful-features-image-upload', 'preview-useful-features-image');
 
     </script>
 @endsection

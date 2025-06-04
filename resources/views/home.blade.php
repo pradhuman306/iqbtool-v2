@@ -245,7 +245,6 @@
                             <p>{{ __('faq_answer') }}</p>
                         </div>
                     </div>
-                  
                 </div>
                 <a href="https://login.iqb-tool.com/request-access" class="btn btn-primary" target="_blank">{{ __('Get more info') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">

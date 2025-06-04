@@ -21,7 +21,6 @@
     "All rights reserved": "Oké gereserveerd.",
     "Built with": "Gebouwd️‍ met",
     "by": "door",
-    
     "hero_banner_subheading": "Meer bereiken met minder",
     "hero_banner_heading": "Slimmere formulieren voor drukke professionals",
     "hero_banner_description": "Maximaliseer uw productiviteit en verminder tijdverspilling met onze efficiënte oplossingen.",
@@ -64,21 +63,25 @@
     "testimonials_item_description": "Wij schaffen meerdere licenties aan om binnen een drukke markt snel en efficiënt rapportages te genereren in onze huisstijl.",
     "author_name": "Verzekeringsmedische experts",
     "author_designation": "Organisatie van verzekeringsmedische deskundigen",
-
     "faq_subheading": "FAQs",
     "faq_heading": "Onbeantwoorde vragen die uw interesse kunnen wekken",
     "faq_description": "Of u nu op zoek bent naar meer details over de functies van de tool of hulp nodig hebt bij het oplossen van problemen, hier vindt u alles wat u nodig heeft om het maximale uit IQB Tool te halen.",
     "faq_question": "Hoe kan ik de gegevens analyseren die ik via mijn vragenlijstformulier heb ingediend?",
     "faq_answer": "U kunt uw gegevens analyseren met behulp van het analysedashboard van IQB Tool, dat gedetailleerde inzichten biedt en u in staat stelt antwoorden te exporteren en visualiseren. Voor een diepere analyse zijn er opties voor gegevensexport beschikbaar.",
-    
-    "Get more info": "Krijg meer informatie",
-    "Smart forms tailored to your needs": "Slimme formulieren, afgestemd op uw behoeften",
-    "FMLKFML Description": "Kies uit onze zorgvuldig ontworpen formulieren, gemaakt om aan uw specifieke eisen te voldoen en een naadloze pasvorm te garanderen.",
-    "Customizable Form Solutions": "Aanpasbare Formulierenoplossingen",
-    "We offer tailored forms just for you": "Op maat gemaakt formulier voor u",
-    "Customizable Form Description": "Deel je wensen met ons, en wij creëren de perfecte formulierenoplossing die bij jouw visie past!",
-    "Simple and transparent pricing": "Eenvoudige en transparante prijzen",
-    "Pricing Description": "Prijzen die de groei van uw bedrijf volgen, dus dat zult u ook doen betaal nooit meer wat u nodig heeft.",
+    "faq_button_text": "Krijg meer informatie",
+    "faq_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "fmlkfml_subheading": "FML\/KFML",
+    "fmlkfml_heading": "Slimme formulieren, afgestemd op uw behoeften",
+    "fmlkfml_description": "Kies uit onze zorgvuldig ontworpen formulieren, gemaakt om aan uw specifieke eisen te voldoen en een naadloze pasvorm te garanderen.",
+    "customizable_form_background_image": "",
+    "customizable_form_subheading": "Aanpasbare Formulierenoplossingen",
+    "customizable_form_heading": "Op maat gemaakt formulier voor u",
+    "customizable_form_description": "Deel je wensen met ons, en wij creëren de perfecte formulierenoplossing die bij jouw visie past!",
+    "customizable_form_image": "assets\/images\/1749038641_1748948845_iqb-tool-preview-ui-nl.svg",
+
+    "pricing_subheading": "Prijzen",
+    "pricing_heading": "Eenvoudige en transparante prijzen",
+    "pricing_description": "Prijzen die de groei van uw bedrijf volgen, dus dat zult u ook doen betaal nooit meer wat u nodig heeft.",
     "Monthly": "Maandelijks",
     "Yearly": "Jaarlijks",
     "Get 1 month extra": "Krijg 1 maand extra",
@@ -121,5 +124,6 @@
     "Send a message": "Stuur een bericht",
     "Enter your full name": "Voer uw volledige naam in",
     "Enter your email address": "Voer uw e-mailadres in",
-    "Enter your message": "Voer uw bericht in"
+    "Enter your message": "Voer uw bericht in",
+    "customizable_forms_background_image": "assets\/images\/1749038641_1748948845_iqb-tool-preview-bg.svg"
 }

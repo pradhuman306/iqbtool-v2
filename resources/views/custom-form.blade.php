@@ -4,14 +4,14 @@
     <div class="gradient-inner">
         <div class="container">
             <div class="iqb-section-header iqb-page-head" data-animate="fade-up">
-                <label class="iqb-label">{{ __('Customizable Form Solutions') }}</label>
-                <h1 id="page-title">{{ __('We offer tailored forms just for you') }}</h1>
-                <p>{{ __('Customizable Form Description') }}</p>
+                <label class="iqb-label">{{ __('customizable_form_subheading') }}</label>
+                <h1 id="page-title">{{ __('customizable_form_heading') }}</h1>
+                <p>{{ __('customizable_form_description') }}</p>
             </div>
-            <div class="iqb-tool-wrapper" data-animate="fade-up" style="background-image: url('{{ asset('assets/images/iqb-tool-preview-bg.svg') }}');">
+            <div class="iqb-tool-wrapper" data-animate="fade-up" style="background-image: url('{{asset('/')}}<?= __('customizable_forms_background_image'); ?>');">
                 <div class="iqb-tool-body">
                     <figure>
-                       <img src="{{ asset('assets/images/iqb-tool-preview-ui-nl.svg') }}" alt="IQB Tool Preview UI"
+                       <img src="{{asset('/')}}<?= __('customizable_form_image'); ?>" alt="IQB Tool Preview UI"
                             class="">
                     </figure>
                 </div>

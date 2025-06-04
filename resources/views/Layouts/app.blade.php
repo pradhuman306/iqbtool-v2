@@ -32,6 +32,7 @@
     </main>
 
     @include('components.footer')
+
     <script src="{{ asset('assets/js/home.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script>

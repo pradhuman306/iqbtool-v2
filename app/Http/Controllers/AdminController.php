@@ -32,7 +32,8 @@ class AdminController extends Controller
   // Validate that 'data' is an array and its values are strings
     $validated = $request->validate([
         'data' => 'required|array',
-        'data.*' => 'required|string',
+        // for text fields
+        // 'data.*' => 'nullable|string',
     ]);
 
     $locale = session('locale', 'nl');
@@ -43,9 +44,35 @@ class AdminController extends Controller
     $jsonContent = file_get_contents($filePath);
     $dataArray = json_decode($jsonContent, true);
 
-    // Loop over the submitted data and update/add each key-value pair
-    foreach ($validated['data'] as $key => $value) {
-        $dataArray[$key] = $value;
+        foreach ($validated['data'] as $key => $value) {
+        // Check if this key has a file upload
+        if ($request->hasFile("data.$key")) {
+            $file = $request->file("data.$key");
+
+            if ($file->isValid()) {
+                // Define target directory
+                $destinationPath = public_path('assets/images');
+
+                // Create directory if it doesn't exist
+                if (!file_exists($destinationPath)) {
+                    mkdir($destinationPath, 0755, true);
+                }
+
+                // Generate unique filename
+                $filename = time() . '_' . $file->getClientOriginalName();
+
+                // Move the file to public/assets/images
+                $file->move($destinationPath, $filename);
+
+                // Save the URL (not the path) into the JSON
+                $imageUrl = ("assets/images/$filename");
+
+                $dataArray[$key] = $imageUrl;
+            }
+        } else {
+            // For normal text fields
+            $dataArray[$key] = $value;
+        }
     }
 
     // Encode back to JSON with pretty print
@@ -54,8 +81,7 @@ class AdminController extends Controller
     // Save to file
     file_put_contents($filePath, $updatedJson);
 
-        return back()->with('success', 'Content updated successfully!');
-
+    return back()->with('success', 'Content updated successfully!');
 
     }
 

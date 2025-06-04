@@ -20,6 +20,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </noscript>
 
+    <link rel="stylesheet" href="https://dev.visualisation.polimapper.co.uk/public/web/css/rte_theme_default.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/richtext.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 </head>

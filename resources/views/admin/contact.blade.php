@@ -9,7 +9,6 @@
                     @php
                         $currentPage = request()->query('page', 'home');
                     @endphp
-
                     <ul class="nav-list">
                         <!-- Home -->
                         <li class="{{ $currentPage == 'home' ? 'active' : '' }}">
@@ -23,7 +22,6 @@
                                 <span>{{ __('Home') }}</span>
                             </a>
                         </li>
-
                         <!-- Forms Group -->
                         <li class="{{ $currentPage == 'fml-kfml' ? 'active' : '' }}">
                             <a href="{{ route('home') }}/admin/edit?page=fml-kfml">
@@ -35,14 +33,12 @@
                                 <span>{{ __('Custom Form') }}</span>
                             </a>
                         </li>
-
                         <!-- Pricing -->
                         <li class="{{ $currentPage == 'pricing' ? 'active' : '' }}">
                             <a href="{{ route('home') }}/admin/edit?page=pricing">
                                 <span>{{ __('Pricing') }}</span>
                             </a>
                         </li>
-
                         <!-- Contact -->
                         <li class="{{ $currentPage == 'contact-us' ? 'active' : '' }}">
                             <a href="{{ route('home') }}/admin/edit?page=contact">
@@ -55,11 +51,14 @@
         </aside>
         <section class="body-main">
             <div class="body-content">
-                @if (session('success'))
-                    <p style="color: green;">{{ session('success') }}</p>
+                 @if (session('success'))
+                    <div class="custom-toast success" id="toast-success">
+                        <span>{{ session('success') }}</span>
+                    </div>
                 @endif
+
                 @if ($errors->any())
-                    <div style="color: red; margin-bottom: 15px;">
+                    <div class="custom-toast error" id="toast-error">
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -67,7 +66,6 @@
                         </ul>
                     </div>
                 @endif
-
                 <div class="page-content-form">
                     <form method="POST" action="{{ route('submit.form') }}" enctype="multipart/form-data">
                         @csrf
@@ -148,15 +146,12 @@
             toolbar_mytoolbar: "{bold,italic}|{fontsize}|insertlink|insertorderedlist|insertunorderedlist|indent|outdent#{code,undo,redo,fullscreenenter,fullscreenexit}",
             // pasteMode: "PasteText", // Uncomment if needed
         };
-
         if (document.querySelector('#editor1')) {
             const editor1 = new RichTextEditor("#editor1", editorConfig);
         }
-
         function setupImagePreview(fileInputId, previewImageId) {
             const input = document.getElementById(fileInputId);
             const preview = document.getElementById(previewImageId);
-
             input.addEventListener('change', function (e) {
                 const file = e.target.files[0];
                 if (file && file.type.startsWith('image/')) {
@@ -169,11 +164,8 @@
                 }
             });
         }
-
         // Setup previews for each input
         setupImagePreview('customizable-form-background-upload', 'preview-customizable-form-background');
         setupImagePreview('customizable-form-image-upload', 'preview-customizable-form-image');
-
-
     </script>
 @endsection

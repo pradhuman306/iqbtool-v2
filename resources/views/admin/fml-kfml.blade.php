@@ -55,11 +55,14 @@
         </aside>
         <section class="body-main">
             <div class="body-content">
-                @if (session('success'))
-                    <p style="color: green;">{{ session('success') }}</p>
+                 @if (session('success'))
+                    <div class="custom-toast success" id="toast-success">
+                        <span>{{ session('success') }}</span>
+                    </div>
                 @endif
+
                 @if ($errors->any())
-                    <div style="color: red; margin-bottom: 15px;">
+                    <div class="custom-toast error" id="toast-error">
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>

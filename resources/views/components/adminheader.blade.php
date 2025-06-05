@@ -30,7 +30,7 @@
             <div class="header-items-right">
                 <ul class="auth-btns">
                     <li>
-                         <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" id="updateContent" class="btn btn-primary">Update</button>
                     </li>
                     <li>
                         <a class="btn-login" href="{{ route('logout') }}">{{ __('Logout') }}</a>

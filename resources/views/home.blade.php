@@ -169,42 +169,19 @@
                 <div class="iqb-testimonials-slider-wrapper">
                     <div class="iqb-testimonials-slider">
                         <div class="iqb-testimonials-body" style="transition: transform 0.5s; transform: translateX(0%);">
+                              <?php
+                    $testimonials = __('testimonials');
+                    foreach ($testimonials as $key => $value) { ?>
                             <div class="iqb-testimonials-item">
                                 <div class="iqb-testimonials-item-wrap">
-                                    <p>{{ __('testimonials_item_description') }}</p>
+                                    <p><?= $value['description']; ?></p>
                                     <div class="iqb-testimonials-footer">
-                                        <span>{{ __('author_name') }}</span>
-                                        <small>{{ __('author_designation') }}</small>
+                                        <span><?= $value['author_name']; ?></span>
+                                        <small><?= $value['author_designation']; ?></small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="iqb-testimonials-item">
-                                <div class="iqb-testimonials-item-wrap">
-                                    <p>{{ __('Very convenient for quickly navigating through a (K)FML and compiling it') }}</p>
-                                    <div class="iqb-testimonials-footer">
-                                        <span>D E</span>
-                                        <small>{{ __('Freelance Occupational Physician') }}</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="iqb-testimonials-item">
-                                <div class="iqb-testimonials-item-wrap">
-                                    <p>{{ __('Through IQB, I have been using KFML since version 4, and compiling these reports has now become very simple') }}</p>
-                                    <div class="iqb-testimonials-footer">
-                                        <span>W K</span>
-                                        <small>{{ __('Freelance Occupational Physician') }}</small>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="iqb-testimonials-item">
-                                <div class="iqb-testimonials-item-wrap">
-                                    <p>{{ __('Very convenient for quickly navigating through a (K)FML and compiling it') }}</p>
-                                    <div class="iqb-testimonials-footer">
-                                        <span>D E</span>
-                                        <small>{{ __('Freelance Occupational Physician') }}</small>
-                                    </div>
-                                </div>
-                            </div>
+       <?php }    ?>
                         </div>
                     </div>
                 </div>
@@ -224,17 +201,21 @@
                     <p>{{ __("faq_description") }}</p>
                 </div>
                 <div class="iqb-faqs-body">
-                    <div class="iqb-faq-list active">
-                        <h3>{{ __('faq_question') }}
+                      <?php
+                    $faq = __('faq');
+                    foreach ($faq as $key => $value) { ?>
+                    <div class="iqb-faq-list <?= $key === 0 ? 'active' : ''; ?>">
+                        <h3><?= $value['faq_question']; ?>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">
                                 <path d="M1 1L7.5 7.5L1 14" stroke="#0E0B3D" stroke-width="2"></path>
                             </svg>
                         </h3>
-                        <div class="iqb-faqs-content" style="max-height: 67px;">
-                            <p>{{ __('faq_answer') }}</p>
+                        <div class="iqb-faqs-content">
+                            <p><?= $value['faq_answer']; ?></p>
                         </div>
                     </div>
+                           <?php }    ?>
                 </div>
                 <a href="https://login.iqb-tool.com/request-access" class="btn btn-primary" target="_blank">{{ __('Get more info') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">

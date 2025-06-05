@@ -15,9 +15,13 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet">
     </noscript>
 
     <link rel="stylesheet" href="https://dev.visualisation.polimapper.co.uk/public/web/css/rte_theme_default.css">
@@ -28,11 +32,35 @@
 
 <body>
     @include('components.adminheader')
-
     <main class="iqb-main">
         @yield('content')
     </main>
+    <script>
+        document.getElementById('updateContent').addEventListener('click', function () {
+            const form = document.querySelector('.page-content-form form');
+            if (form) {
+                form.submit();
+            }
+        });
 
+        
+        // alert
+        window.addEventListener('DOMContentLoaded', () => {
+        const toastSuccess = document.getElementById('toast-success');
+        const toastError = document.getElementById('toast-error');
+
+        if (toastSuccess) {
+            setTimeout(() => {
+                toastSuccess.style.display = 'none';
+            }, 5000);
+        }
+
+        if (toastError) {
+            setTimeout(() => {
+                toastError.style.display = 'none';
+            }, 5000);
+        }
+    });
+    </script>
 </body>
-
 </html>

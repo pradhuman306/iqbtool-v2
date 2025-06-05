@@ -57,17 +57,69 @@
     "features_item_description": "Reports should not include unnecessary copy-pasting of content.",
     "features_button_text": "Get started now",
     "features_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "features": [
+        {
+            "description": "Reports should not include unnecessary copy-pasting of content.",
+            "image": "assets\/images\/1749019617_iqb-report.svg"
+        },
+        {
+            "description": "Incorporating our unique house style, we present the following line.",
+            "image": "assets\/images\/iqb-style.svg"
+        },
+        {
+            "description": "Experience the power of one-click: both an FML and a KFML combined.",
+            "image": "assets\/images\/iqb-export-report.svg"
+        },
+        {
+            "description": "Save time, using our intelligent questionnaire builder features.",
+            "image": "assets\/images\/iqb-save-time.svg"
+        }
+    ],
     "testimonials_subheading": "Testimonials",
     "testimonials_heading": "Our goal is to help hospitals create their own questionnaire set",
     "testimonials_description": "Choose from our wide array of forms, meticulously designed to meet your specific needs and ensure a seamless fit.",
-    "testimonials_item_description": "We are purchasing multiple licenses to quickly and efficiently generate reports in our corporate style within a busy market.",
-    "author_name": "Insurance Medical Experts",
-    "author_designation": "Organization of Insurance medical experts",
+    "testimonials": [
+        {
+            "description": "We are purchasing multiple licenses to quickly and efficiently generate reports in our corporate style within a busy market.",
+            "author_name": "Insurance Medical Experts",
+            "author_designation": "Organization of Insurance medical experts"
+        },
+        {
+            "description": "Very convenient for quickly navigating through a (K)FML and compiling it.",
+            "author_name": "D E",
+            "author_designation": "Freelance Occupational Physician"
+        },
+        {
+            "description": "Through IQB, I have been using KFML since version 4, and compiling these reports has now become very simple.",
+            "author_name": "W K",
+            "author_designation": "Freelance Occupational Physician"
+        }
+    ],
     "faq_subheading": "FAQs",
     "faq_heading": "Unanswered questions that may pique your interest",
     "faq_description": "Whether you're looking for more details about the tool's features or need help troubleshooting, you'll find everything you need to get the most out of IQB Tool right here.",
-    "faq_question": "How can I analyze the data I submitted through my questionnaire form?",
-    "faq_answer": "You can analyze your data using IQB Tool’s analytics dashboard, which provides detailed insights and allows you to export and visualize responses. For deeper analysis, data export options are available.",
+    "faq": [
+        {
+            "faq_question": "How can I analyze the data I submitted through my questionnaire form?",
+            "faq_answer": "You can analyze your data using IQB Tool’s analytics dashboard, which provides detailed insights and allows you to export and visualize responses. For deeper analysis, data export options are available."
+        },
+        {
+            "faq_question": "How do I customize my form?",
+            "faq_answer": "Easily customize your form with our drag-and-drop editor. Modify design, fields, and settings like conditional logic, or add custom CSS for advanced customization."
+        },
+        {
+            "faq_question": "Why would someone use a questionnaire form?",
+            "faq_answer": "Questionnaire forms are ideal for gathering structured data, such as feedback or registrations. IQB Tool simplifies the process with smart forms that are easy to create and personalize."
+        },
+        {
+            "faq_question": "What occurs when I surpass the monthly submission threshold?",
+            "faq_answer": "Exceeding the submission limit? Don’t worry—extra submissions are securely stored, and you can access them by upgrading your plan."
+        },
+        {
+            "faq_question": "What is IQB tool?",
+            "faq_answer": "IQB is a tool designed to simplify and streamline the process of creating professional and smart forms for busy professionals like you. We understand that your time is valuable, which is why we developed IQB as your optimal solution for creating smarter, more efficient forms. An example of an IQB form is the KFML form."
+        }
+    ],
     "faq_button_text": "Get more info",
     "faq_button_url": "https:\/\/login.iqb-tool.com\/request-access",
     "fmlkfml_subheading": "FML\/KFML",
@@ -125,23 +177,5 @@
     "Enter your email address": "Enter your email address",
     "Enter your message": "Enter your message",
     "faq_item_description": "How can I analyze the data I submitted through my questionnaire form?",
-    "customizable_forms_background_image": "assets\/images\/1749038616_1748948845_iqb-tool-preview-bg.svg",
-    "features": [
-        {
-            "description": "Reports should not include unnecessary copy-pasting of content.",
-            "image": "assets/images/1749019617_iqb-report.svg"
-        },
-        {
-            "description": "Incorporating our unique house style, we present the following line.",
-            "image": "assets/images/iqb-style.svg"
-        },
-         {
-            "description": "Experience the power of one-click: both an FML and a KFML combined.",
-            "image": "assets/images/iqb-export-report.svg"
-        },
-         {
-            "description": "Save time, using our intelligent questionnaire builder features.",
-            "image": "assets/images/iqb-save-time.svg"
-        }
-    ]
+    "customizable_forms_background_image": "assets\/images\/1749038616_1748948845_iqb-tool-preview-bg.svg"
 }

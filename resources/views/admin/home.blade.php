@@ -58,10 +58,13 @@
         <section class="body-main">
             <div class="body-content">
                 @if (session('success'))
-                    <p style="color: green;">{{ session('success') }}</p>
+                    <div class="custom-toast success" id="toast-success">
+                        <span>{{ session('success') }}</span>
+                    </div>
                 @endif
+
                 @if ($errors->any())
-                    <div style="color: red; margin-bottom: 15px;">
+                    <div class="custom-toast error" id="toast-error">
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -69,7 +72,6 @@
                         </ul>
                     </div>
                 @endif
-
                 <div class="page-content-form">
                     <form method="POST" action="{{ route('submit.form') }}" enctype="multipart/form-data">
                         @csrf
@@ -501,85 +503,6 @@
                                                     value=""><?= $data['useful_features_description']; ?></textarea>
                                             </div>
                                         </div>
-                                        <div id="feature-items-container">
-                                            <?php
-                                            foreach ($data['features'] as $key => $value) { ?>
-                                            <div class="col-12 <?= $key>0?'feature-item':''; ?>">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="form-group mb-3">
-                                                                <label for="form-solutions-image-upload">Features Item
-                                                                    Image</label><br />
-                                                                <div class="upload-box">
-                                                                    <span>Click or drag image to upload</span>
-                                                                    <input type="file" id="useful-features-image-upload"
-                                                                        name="data[features][<?= $key; ?>][image]"
-                                                                        accept="image/*" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group mb-3">
-                                                                <label>Preview Image</label><br />
-                                                                <img id="preview-useful_features-image"
-                                                                    src="{{ asset('/') }}<?= $value['image']; ?>"
-                                                                    class="preview-img" name="data[preview]" alt="Image Preview" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group mb-3">
-                                                        <label for="">Features Item Description</label>
-                                                        <textarea type="text" class="form-control"
-                                                            name="data[features][<?= $key; ?>][description]"
-                                                            value=""><?= $value['description']; ?></textarea>
-                                                    </div>
-                                                </div>
-                                                <?php if($key>0){ ?>
-                                                      <div class="col-12 text-end">
-                                                    <button type="button" class="btn btn-danger" onclick="removeFeatureItem(this)">Remove</button>
-                                                </div>
-                                               <?php } ?>
-                                            </div>
-                                            </div>
-                                           <?php } ?>
-                                        
-                                        </div>
-                                        {{-- feature item template content --}}
-                                            <button type="button" class="btn btn-success mb-3" onclick="addFeatureItem()">Add New Feature</button>
-
-                                        <div id="feature-item-template" class="feature-item row mb-3" style="display: none;">
-                                                <div class="col-6">
-                                                    <div class="form-group mb-3">
-                                                        <label>Features Item Image</label><br />
-                                                        <div class="upload-box">
-                                                            <span>Click or drag image to upload</span>
-                                                            <input type="file" name="data[features][0][image]" class="feature-image" accept="image/*" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="form-group mb-3">
-                                                        <label>Preview Image</label><br />
-                                                        <img class="preview-img" name="data[preview]" src="" style="max-height: 100px;" alt="Image Preview" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group mb-3">
-                                                        <label>Description</label>
-                                                        <textarea name="data[features][0][description]" class="form-control feature-description"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 text-end">
-                                                    <button type="button" class="btn btn-danger" onclick="removeFeatureItem(this)">Remove</button>
-                                                </div>
-                                                <hr />
-                                            </div>
-                                        {{-- end  --}}
-                                        
                                         <div class="col-12">
                                             <div class="row">
                                                 <div class="col-6">
@@ -606,8 +529,109 @@
                         </div>
                         <div class="page-content-section mt-4">
                             <div class="row">
+                                <div id="feature-items-container" class="col-12">
+                                    <h2 class="mb-4">Features</h2>
+                                    <?php
+    foreach ($data['features'] as $key => $value) { ?>
+                                    <div class="row iqb-feature-item <?= $key > 0 ? 'feature-item' : ''; ?>">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label for="form-solutions-image-upload">Features Item
+                                                            Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" id="useful-features-image-upload"
+                                                                name="data[features][<?= $key; ?>][image]"
+                                                                accept="image/*" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row row-wrapper">
+                                                        <div class="preview-col">
+                                                            <div class="form-group mb-3">
+                                                                <label>Preview Image</label><br />
+                                                                <img id="preview-useful_features-image"
+                                                                    src="{{ asset('/') }}<?= $value['image']; ?>"
+                                                                    class="preview-img" name="data[preview]"
+                                                                    alt="Image Preview" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="remove-col">
+                                                            <?php    if ($key > 0) { ?>
+                                                            <div class="text-end">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    onclick="removeFeatureItem(this)">Remove</button>
+                                                            </div>
+                                                            <?php    } ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Features Item Description</label>
+                                                <textarea type="text" class="form-control"
+                                                    name="data[features][<?= $key; ?>][description]"
+                                                    value=""><?= $value['description']; ?></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+                                {{-- feature item template content --}}
+                                <div class="col-12 mt-4">
+                                    <button type="button" class="btn btn-primary-outline add-row-btn"
+                                        onclick="addFeatureItem()">Add New
+                                        Feature</button>
+                                </div>
+                                <div id="feature-item-template" class="iqb-feature-item feature-item row"
+                                    style="display: none;">
+                                    <div class="col-6">
+                                        <div class="form-group mb-3">
+                                            <label>Features Item Image</label><br />
+                                            <div class="upload-box">
+                                                <span>Click or drag image to upload</span>
+                                                <input type="file" name="data[features][0][image]" class="feature-image"
+                                                    accept="image/*" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row row-wrapper">
+                                            <div class="preview-col">
+                                                <div class="form-group mb-3">
+                                                    <label>Preview Image</label><br />
+                                                    <img class="preview-img" name="data[preview]" src=""
+                                                        style="max-height: 100px;" alt="Image Preview" />
+                                                </div>
+                                            </div>
+                                            <div class="remove-col">
+                                                <div class="text-end">
+                                                    <button type="button" class="btn btn-danger"
+                                                        onclick="removeFeatureItem(this)">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group mb-3">
+                                            <label>Description</label>
+                                            <textarea name="data[features][0][description]"
+                                                class="form-control feature-description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- end --}}
+                            </div>
+                        </div>
+                        <div class="page-content-section mt-4">
+                            <div class="row">
                                 <div class="col-12">
-                                    <h2 class="mb-4">Testimonials</h2>
+                                    <h2 class="mb-4">Testimonials Section</h2>
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="row">
@@ -637,41 +661,109 @@
                                                     value=""><?= $data['testimonials_description']; ?></textarea>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-content-section mt-4">
+                            <div class="row">
+                                <div id="testimonials-items-container" class="col-12">
+                                    <h2 class="mb-4">Testimonials List</h2>
+                                    <?php
+    foreach ($data['testimonials'] as $key => $value) { ?>
+                                    <div class="row iqb-testimonials-item <?= $key > 0 ? 'testimonials-item' : ''; ?>">
                                         <div class="col-12">
-                                            <div class="row">
-                                                <div class="col-12">
+                                            <div class="row row-wrapper">
+                                                <div class="col-12 preview-col">
                                                     <div class="form-group mb-3">
                                                         <label for="">Testimonials Item Description</label>
                                                         <textarea type="text" class="form-control"
-                                                            name="data[testimonials_item_description]"
-                                                            value=""><?= $data['testimonials_item_description']; ?></textarea>
+                                                            name="data[testimonials][<?= $key; ?>][description]"
+                                                            data-name="data[testimonials][<?= $key; ?>][description]"
+                                                            value=""><?= $value['description']; ?></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-12">
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="form-group mb-3">
-                                                                <label for="data[px_image]">Author Name</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="data[author_name]"
-                                                                    value="<?= $data['author_name']; ?>">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="form-group">
-                                                                <label for="data[px_image]">Author Designation</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="data[author_designation]"
-                                                                    value="<?= $data['author_designation']; ?>">
-                                                            </div>
-                                                        </div>
+                                                <div class="remove-col">
+                                                    <?php    if ($key > 0) { ?>
+                                                    <div class="text-end">
+                                                        <button type="button" class="btn btn-danger"
+                                                            onclick="removeTestimonialItem(this)">Remove</button>
+                                                    </div>
+                                                    <?php    } ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label>Author Name</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[testimonials][<?= $key; ?>][author_name]"
+                                                            data-name="data[testimonials][<?= $key; ?>][author_name]"
+                                                            value="<?= htmlspecialchars($data['testimonials'][$key]['author_name'] ?? '', ENT_QUOTES); ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>Author Designation</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[testimonials][<?= $key; ?>][author_designation]"
+                                                            data-name="data[testimonials][<?= $key; ?>][author_designation]"
+                                                            value="<?= htmlspecialchars($data['testimonials'][$key]['author_designation'] ?? '', ENT_QUOTES); ?>">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
                             </div>
+                            {{-- testimonials item template content --}}
+                            <div class="col-12 mt-4">
+                                <button type="button" class="btn btn-primary-outline add-row-btn"
+                                    onclick="addTestimonialItem()">Add New
+                                    Testimonial</button>
+                            </div>
+                            <div id="testimonial-item-template" class="iqb-testimonials-item testimonials-item row"
+                                style="display: none;">
+                                <div class="col-12">
+                                    <div class="row row-wrapper">
+                                        <div class="col-12 preview-col">
+                                            <div class="form-group mb-3">
+                                                <label for="">Testimonials Item Description</label>
+                                                <textarea type="text" class="form-control"
+                                                    data-name="data[testimonials][0][description]" value=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="remove-col">
+                                            <div class="text-end">
+                                                <button type="button" class="btn btn-danger"
+                                                    onclick="removeTestimonialItem(this)">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group mb-3">
+                                                <label>Author Name</label>
+                                                <input type="text" class="form-control"
+                                                    data-name="data[testimonials][0][author_name]" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Author Designation</label>
+                                                <input type="text" class="form-control"
+                                                    data-name="data[testimonials][0][author_designation]" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- end --}}
                         </div>
                         <div class="page-content-section mt-4">
                             <div class="row">
@@ -703,28 +795,88 @@
                                                     value=""><?= $data['faq_description']; ?></textarea>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-content-section mt-4">
+                            <div class="row">
+                                <div id="faq-items-container" class="col-12">
+                                    <h2 class="mb-4">Faqs List</h2>
+                                    <?php
+    foreach ($data['faq'] as $key => $value) { ?>
+                                    <div class="row iqb-faq-item <?= $key > 0 ? 'faq-item' : ''; ?>">
                                         <div class="col-12">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <div class="form-group mb-3">
-                                                        <label for="">Faq Question</label>
-                                                        <input type="text" class="form-control"
-                                                            name="data[faq_item_description]"
-                                                            value="<?= $data['faq_question']; ?>">
+                                                    <div class="row row-wrapper">
+                                                        <div class="col-12 preview-col">
+
+                                                            <div class="form-group mb-3">
+                                                                <label for="">Faq Question</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="data[faq][<?= $key; ?>][faq_question]"
+                                                                    data-name="data[faq][<?= $key; ?>][faq_question]"
+                                                                    value="<?= $value['faq_question']; ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="remove-col">
+                                                            <?php    if ($key > 0) { ?>
+                                                            <div class="text-end">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    onclick="removeFaqItem(this)">Remove</button>
+                                                            </div>
+                                                            <?php    } ?>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <label for="data[px_image]">Faq Answer</label>
-                                                        <textarea type="text" class="form-control" name="data[faq_answer]"
-                                                            value=""><?= $data['faq_answer']; ?></textarea>
+                                                        <textarea type="text" class="form-control"
+                                                            name="data[faq][<?= $key; ?>][faq_answer]"
+                                                            data-name="data[faq][<?= $key; ?>][faq_answer]"
+                                                            value=""><?= $value['faq_answer']; ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
                             </div>
+                            {{-- faq item template content --}}
+                            <div class="col-12 mt-4">
+                                <button type="button" class="btn btn-primary-outline add-row-btn" onclick="addFaqItem()">Add
+                                    New FAQ</button>
+                            </div>
+                            <div id="faq-item-template" class="iqb-faq-item faq-item row" style="display: none;">
+                                <div class="col-12">
+                                    <div class="row row-wrapper">
+                                        <div class="col-12 preview-col">
+                                            <div class="form-group mb-3">
+                                                <label for="">Faq Question</label>
+                                                <textarea type="text" class="form-control"
+                                                    data-name="data[faq][0][faq_question]" value=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="remove-col">
+                                            <div class="text-end">
+                                                <button type="button" class="btn btn-danger"
+                                                    onclick="removeTestimonialItem(this)">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="data[px_image]">Faq Answer</label>
+                                        <textarea type="text" class="form-control" data-name="data[faq][0][faq_answer]"
+                                            value=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- end --}}
                         </div>
                         <div class="row mt-4">
                             <div class="col-12">
@@ -782,9 +934,9 @@
                 item.querySelector('[name^="data[features]"][name$="[description]"]').name = `data[features][${index}][description]`;
                 item.querySelector('[name^="data[features]"][type="file"]').name = `data[features][${index}][image]`;
                 let inputID = 'feature-input-' + index;
-                    item.querySelector('[name^="data[features]"][type="file"]').id = inputID;
+                item.querySelector('[name^="data[features]"][type="file"]').id = inputID;
                 let previewID = 'feature-preview-' + index;
-                    item.querySelector('[name^="data[preview]"]').id = previewID;
+                item.querySelector('[name^="data[preview]"]').id = previewID;
                 setupImagePreview(inputID, previewID);
             });
         }
@@ -802,8 +954,58 @@
             btn.closest('.feature-item').remove();
             updateFeatureIndexes();
         }
-        
         updateFeatureIndexes();
 
+
+        // testimonials
+        function updateTestimonialIndexes() {
+            document.querySelectorAll('.testimonials-item').forEach((item, index) => {
+                if (window.getComputedStyle(item).display === 'none') return; // Skip hidden items
+                index = index + 1; // Start from 1 for better readability
+                item.querySelector('[data-name^="data[testimonials]"][data-name$="[description]"]').name = `data[testimonials][${index}][description]`;
+                item.querySelector('[data-name^="data[testimonials]"][data-name$="[author_name]"]').name = `data[testimonials][${index}][author_name]`;
+                item.querySelector('[data-name^="data[testimonials]"][data-name$="[author_designation]"]').name = `data[testimonials][${index}][author_designation]`;
+            });
+        }
+
+        function addTestimonialItem() {
+            const template = document.getElementById('testimonial-item-template').cloneNode(true);
+            template.style.display = '';
+            template.classList.remove('d-none');
+            template.removeAttribute('id');
+            document.getElementById('testimonials-items-container').appendChild(template);
+            updateTestimonialIndexes();
+        }
+
+        function removeTestimonialItem(btn) {
+            btn.closest('.testimonials-item').remove();
+            updateTestimonialIndexes();
+        }
+        updateTestimonialIndexes();
+
+        // faq
+        function updateFaqIndexes() {
+            document.querySelectorAll('.faq-item').forEach((item, index) => {
+                if (window.getComputedStyle(item).display === 'none') return; // Skip hidden items
+                index = index + 1; // Start from 1 for better readability
+                item.querySelector('[data-name^="data[faq]"][data-name$="[faq_question]"]').name = `data[faq][${index}][faq_question]`;
+                item.querySelector('[data-name^="data[faq]"][data-name$="[faq_answer]"]').name = `data[faq][${index}][faq_answer]`;
+            });
+        }
+
+        function addFaqItem() {
+            const template = document.getElementById('faq-item-template').cloneNode(true);
+            template.style.display = '';
+            template.classList.remove('d-none');
+            template.removeAttribute('id');
+            document.getElementById('faq-items-container').appendChild(template);
+            updateFaqIndexes();
+        }
+
+        function removeFaqItem(btn) {
+            btn.closest('.faq-item').remove();
+            updateFaqIndexes();
+        }
+        updateFaqIndexes();
     </script>
 @endsection

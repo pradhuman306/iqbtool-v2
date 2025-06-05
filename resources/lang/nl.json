@@ -57,17 +57,53 @@
     "features_item_description": "Rapporten mogen geen onnodig kopiëren en plakken van inhoud bevatten.",
     "features_button_text": "Ga nu aan de slag",
     "features_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "features": [
+        {
+            "description": "Rapporten mogen geen onnodig kopiëren en plakken van inhoud bevatten.",
+            "image": "assets/images/1749019617_iqb-report.svg"
+        },
+        {
+            "description": "Vanuit onze unieke huisstijl presenteren wij de volgende lijn.",
+            "image": "assets/images/iqb-style.svg"
+        },
+        {
+            "description": "Ervaar de kracht van één klik: zowel een FML als een KFML gecombineerd.",
+            "image": "assets/images/iqb-export-report.svg"
+        },
+        {
+            "description": "Bespaar tijd met behulp van onze intelligente functies voor het maken van vragenlijsten.",
+            "image": "assets/images/iqb-save-time.svg"
+        }
+    ],
     "testimonials_subheading": "Getuigenissen",
     "testimonials_heading": "Ons doel is om ziekenhuizen te helpen hun eigen vragenlijstenset te creëren",
     "testimonials_description": "Kies uit ons brede scala aan vormen, zorgvuldig ontworpen om aan uw specifieke behoeften te voldoen en een naadloze pasvorm te garanderen",
-    "testimonials_item_description": "Wij schaffen meerdere licenties aan om binnen een drukke markt snel en efficiënt rapportages te genereren in onze huisstijl.",
-    "author_name": "Verzekeringsmedische experts",
-    "author_designation": "Organisatie van verzekeringsmedische deskundigen",
+    "testimonials": [
+        {
+            "description": "Wij schaffen meerdere licenties aan om binnen een drukke markt snel en efficiënt rapportages te genereren in onze huisstijl.",
+            "author_name": "Verzekeringsmedische experts",
+            "author_designation": "Organisatie van verzekeringsmedische deskundigen"
+        },
+        {
+            "description": "Erg handig om snel door een (K)FML te navigeren en deze samen te stellen.",
+            "author_name": "D E",
+            "author_designation": "Freelance bedrijfsarts"
+        },
+        {
+            "description": "Via IQB gebruik ik KFML sinds versie 4 en het samenstellen van deze rapporten is nu heel eenvoudig geworden.",
+            "author_name": "W K",
+            "author_designation": "Freelance bedrijfsarts"
+        }
+    ],
     "faq_subheading": "FAQs",
     "faq_heading": "Onbeantwoorde vragen die uw interesse kunnen wekken",
     "faq_description": "Of u nu op zoek bent naar meer details over de functies van de tool of hulp nodig hebt bij het oplossen van problemen, hier vindt u alles wat u nodig heeft om het maximale uit IQB Tool te halen.",
-    "faq_question": "Hoe kan ik de gegevens analyseren die ik via mijn vragenlijstformulier heb ingediend?",
-    "faq_answer": "U kunt uw gegevens analyseren met behulp van het analysedashboard van IQB Tool, dat gedetailleerde inzichten biedt en u in staat stelt antwoorden te exporteren en visualiseren. Voor een diepere analyse zijn er opties voor gegevensexport beschikbaar.",
+    "faq": [
+        {
+            "faq_question": "Hoe kan ik de gegevens analyseren die ik via mijn vragenlijstformulier heb ingediend?",
+            "faq_answer": "U kunt uw gegevens analyseren met behulp van het analysedashboard van IQB Tool, dat gedetailleerde inzichten biedt en u in staat stelt antwoorden te exporteren en visualiseren. Voor een diepere analyse zijn er opties voor gegevensexport beschikbaar."
+        }
+    ],
     "faq_button_text": "Krijg meer informatie",
     "faq_button_url": "https:\/\/login.iqb-tool.com\/request-access",
     "fmlkfml_subheading": "FML\/KFML",
@@ -78,7 +114,6 @@
     "customizable_form_heading": "Op maat gemaakt formulier voor u",
     "customizable_form_description": "Deel je wensen met ons, en wij creëren de perfecte formulierenoplossing die bij jouw visie past!",
     "customizable_form_image": "assets\/images\/1749038641_1748948845_iqb-tool-preview-ui-nl.svg",
-
     "pricing_subheading": "Prijzen",
     "pricing_heading": "Eenvoudige en transparante prijzen",
     "pricing_description": "Prijzen die de groei van uw bedrijf volgen, dus dat zult u ook doen betaal nooit meer wat u nodig heeft.",

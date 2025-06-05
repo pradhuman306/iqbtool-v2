@@ -501,7 +501,10 @@
                                                     value=""><?= $data['useful_features_description']; ?></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-12">
+                                        <div id="feature-items-container">
+                                            <?php
+                                            foreach ($data['features'] as $key => $value) { ?>
+                                            <div class="col-12 <?= $key>0?'feature-item':''; ?>">
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="row">
@@ -512,7 +515,7 @@
                                                                 <div class="upload-box">
                                                                     <span>Click or drag image to upload</span>
                                                                     <input type="file" id="useful-features-image-upload"
-                                                                        name="data[useful_features_image]"
+                                                                        name="data[features][<?= $key; ?>][image]"
                                                                         accept="image/*" />
                                                                 </div>
                                                             </div>
@@ -521,8 +524,8 @@
                                                             <div class="form-group mb-3">
                                                                 <label>Preview Image</label><br />
                                                                 <img id="preview-useful_features-image"
-                                                                    src="{{ asset('/') }}<?= $data['useful_features_image']; ?>"
-                                                                    class="preview-img" alt="Image Preview" />
+                                                                    src="{{ asset('/') }}<?= $value['image']; ?>"
+                                                                    class="preview-img" name="data[preview]" alt="Image Preview" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -531,12 +534,52 @@
                                                     <div class="form-group mb-3">
                                                         <label for="">Features Item Description</label>
                                                         <textarea type="text" class="form-control"
-                                                            name="data[features_item_description]"
-                                                            value=""><?= $data['features_item_description']; ?></textarea>
+                                                            name="data[features][<?= $key; ?>][description]"
+                                                            value=""><?= $value['description']; ?></textarea>
                                                     </div>
                                                 </div>
+                                                <?php if($key>0){ ?>
+                                                      <div class="col-12 text-end">
+                                                    <button type="button" class="btn btn-danger" onclick="removeFeatureItem(this)">Remove</button>
+                                                </div>
+                                               <?php } ?>
                                             </div>
+                                            </div>
+                                           <?php } ?>
+                                        
                                         </div>
+                                        {{-- feature item template content --}}
+                                            <button type="button" class="btn btn-success mb-3" onclick="addFeatureItem()">Add New Feature</button>
+
+                                        <div id="feature-item-template" class="feature-item row mb-3" style="display: none;">
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label>Features Item Image</label><br />
+                                                        <div class="upload-box">
+                                                            <span>Click or drag image to upload</span>
+                                                            <input type="file" name="data[features][0][image]" class="feature-image" accept="image/*" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label>Preview Image</label><br />
+                                                        <img class="preview-img" name="data[preview]" src="" style="max-height: 100px;" alt="Image Preview" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group mb-3">
+                                                        <label>Description</label>
+                                                        <textarea name="data[features][0][description]" class="form-control feature-description"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 text-end">
+                                                    <button type="button" class="btn btn-danger" onclick="removeFeatureItem(this)">Remove</button>
+                                                </div>
+                                                <hr />
+                                            </div>
+                                        {{-- end  --}}
+                                        
                                         <div class="col-12">
                                             <div class="row">
                                                 <div class="col-6">
@@ -732,6 +775,35 @@
         setupImagePreview('form-solutions-image-upload', 'preview-form-solutions-image');
         setupImagePreview('about-iqb-image-upload', 'preview-about-iqb-image');
         setupImagePreview('useful-features-image-upload', 'preview-useful-features-image');
+
+        function updateFeatureIndexes() {
+            document.querySelectorAll('.feature-item').forEach((item, index) => {
+                index = index + 1; // Start from 1 for better readability
+                item.querySelector('[name^="data[features]"][name$="[description]"]').name = `data[features][${index}][description]`;
+                item.querySelector('[name^="data[features]"][type="file"]').name = `data[features][${index}][image]`;
+                let inputID = 'feature-input-' + index;
+                    item.querySelector('[name^="data[features]"][type="file"]').id = inputID;
+                let previewID = 'feature-preview-' + index;
+                    item.querySelector('[name^="data[preview]"]').id = previewID;
+                setupImagePreview(inputID, previewID);
+            });
+        }
+
+        function addFeatureItem() {
+            const template = document.getElementById('feature-item-template').cloneNode(true);
+            template.style.display = '';
+            template.classList.remove('d-none');
+            template.removeAttribute('id');
+            document.getElementById('feature-items-container').appendChild(template);
+            updateFeatureIndexes();
+        }
+
+        function removeFeatureItem(btn) {
+            btn.closest('.feature-item').remove();
+            updateFeatureIndexes();
+        }
+        
+        updateFeatureIndexes();
 
     </script>
 @endsection

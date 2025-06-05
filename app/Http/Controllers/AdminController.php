@@ -44,6 +44,46 @@ class AdminController extends Controller
     $jsonContent = file_get_contents($filePath);
     $dataArray = json_decode($jsonContent, true);
 
+    // if have to check if the 'data.features' key exists in the validated array
+    if(isset($validated['data']['features']) && is_array($validated['data']['features'])) {
+        foreach ($validated['data']['features'] as $index => $feature) {
+            $description = $feature['description'];
+            $fileKey = "data.features.$index.image";
+            if ($request->hasFile($fileKey)) {
+                $file = $request->file($fileKey);
+                if ($file->isValid()) {
+                    $destinationPath = public_path('assets/images');
+                    if (!file_exists($destinationPath)) {
+                        mkdir($destinationPath, 0755, true);
+                    }
+                    $filename = time() . '_' . $file->getClientOriginalName();
+                    $file->move($destinationPath, $filename);
+                    $imageUrl = "assets/images/$filename";
+                    if(!isset($dataArray['features'])) {
+                        $dataArray['features'] = [];
+                    }
+                    if($description){
+                        $dataArray['features'][] = [
+                            'description' => $description,
+                            'image' => $imageUrl,
+                        ];
+                    }
+                }
+            } else {
+                if(!isset($dataArray['features'])) {
+                        $dataArray['features'] = [];
+                    }
+                    if($description){
+                $dataArray['features'][] = [
+                    'description' => $description,
+                    'image' => '', // or default image path
+                ];
+            }
+            }
+        }
+        unset($validated['data']['features']);
+    }  // if have to check if the 'data.features' key exists in the validated array
+
         foreach ($validated['data'] as $key => $value) {
         // Check if this key has a file upload
         if ($request->hasFile("data.$key")) {

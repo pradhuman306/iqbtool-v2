@@ -135,27 +135,17 @@
                 <div class="iqb-section-header iqb-features-head">
                     <label class="iqb-label">{{ __('useful_features_subheading') }}</label>
                     <h2>{{ __('useful_features_heading') }}</h2>
-                    <p>{{ __('useful_features_description') }}Please reach out to our team to discuss further and explore collaboration opportunities.</p>
+                    <p>{{ __('useful_features_description') }}</p>
                 </div>
                 <div class="iqb-features-body row">
+                    <?php
+                    $features = __('features');
+                    foreach ($features as $key => $value) { ?>
                     <div class="iqb-features-list col-4">
-                        <img src="{{asset('/')}}<?= __('useful_features_image'); ?>" alt="iqb report" class="" loading="lazy">
-                        <p>{{ __('features_item_description') }}</p>
+                        <img src="{{asset('/')}}<?= $value['image']; ?>" alt="iqb report" class="" loading="lazy">
+                        <p><?= $value['description']; ?></p>
                     </div>
-                    <div class="iqb-features-list col-4">
-                        <img src="{{ asset('assets/images/iqb-style.svg') }}" alt="iqb style" class="" loading="lazy">
-                        <p>{{ __('Incorporating our unique house style, we present the following line') }}</p>
-                    </div>
-                    <div class="iqb-features-list col-4">
-                        <img src="{{ asset('assets/images/iqb-export-report.svg') }}" alt="iqb pdf and doc report" class=""
-                            loading="lazy">
-                        <p>{{ __('Experience the power of one-click: both an FML and a KFML combined') }}</p>
-                    </div>
-                    <div class="iqb-features-list col-4">
-                        <img src="{{ asset('assets/images/iqb-save-time.svg') }}" alt="iqb save time" class=""
-                            loading="lazy">
-                        <p>{{ __('Save time, using our intelligent questionnaire builder features') }}</p>
-                    </div>
+                  <?php }    ?>
                 </div>
                 <a href="{{ __('features_button_url') }}" class="btn btn-primary" target="_blank"
                     aria-label="{{ __('features_button_text') }}">{{ __('features_button_text') }}

@@ -125,5 +125,23 @@
     "Enter your email address": "Enter your email address",
     "Enter your message": "Enter your message",
     "faq_item_description": "How can I analyze the data I submitted through my questionnaire form?",
-    "customizable_forms_background_image": "assets\/images\/1749038616_1748948845_iqb-tool-preview-bg.svg"
+    "customizable_forms_background_image": "assets\/images\/1749038616_1748948845_iqb-tool-preview-bg.svg",
+    "features": [
+        {
+            "description": "Reports should not include unnecessary copy-pasting of content.",
+            "image": "assets/images/1749019617_iqb-report.svg"
+        },
+        {
+            "description": "Incorporating our unique house style, we present the following line.",
+            "image": "assets/images/iqb-style.svg"
+        },
+         {
+            "description": "Experience the power of one-click: both an FML and a KFML combined.",
+            "image": "assets/images/iqb-export-report.svg"
+        },
+         {
+            "description": "Save time, using our intelligent questionnaire builder features.",
+            "image": "assets/images/iqb-save-time.svg"
+        }
+    ]
 }

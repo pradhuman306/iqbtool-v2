@@ -46,8 +46,11 @@ class AdminController extends Controller
 
         // if have to check if the 'data.features' key exists in the validated array
         if (isset($validated['data']['features']) && is_array($validated['data']['features'])) {
+            $dataArray['features'] = [];
+
             foreach ($validated['data']['features'] as $index => $feature) {
                 $description = $feature['description'];
+                $oldimage = $feature['oldimage'] ?? null;
                 $fileKey = "data.features.$index.image";
                 if ($request->hasFile($fileKey)) {
                     $file = $request->file($fileKey);
@@ -59,9 +62,6 @@ class AdminController extends Controller
                         $filename = time() . '_' . $file->getClientOriginalName();
                         $file->move($destinationPath, $filename);
                         $imageUrl = "assets/images/$filename";
-                        if (!isset($dataArray['features'])) {
-                            $dataArray['features'] = [];
-                        }
                         if ($description) {
                             $dataArray['features'][] = [
                                 'description' => $description,
@@ -70,15 +70,12 @@ class AdminController extends Controller
                         }
                     }
                 } else {
-                    //     if(!isset($dataArray['features'])) {
-                    //             $dataArray['features'] = [];
-                    //         }
-                    //         if($description){
-                    //     $dataArray['features'][] = [
-                    //         'description' => $description,
-                    //         'image' => '', // or default image path
-                    //     ];
-                    // }
+                            if($description){
+                        $dataArray['features'][] = [
+                            'description' => $description,
+                            'image' => $oldimage, // or default image path
+                        ];
+                    }
                 }
             }
             unset($validated['data']['features']);

@@ -33,6 +33,15 @@
                         <button type="submit" id="updateContent" class="btn btn-primary">Update</button>
                     </li>
                     <li>
+                     @php
+                        use Illuminate\Support\Facades\Route;
+                        $requestedPage = request()->query('page', 'home');
+                        $routeName = Route::has($requestedPage) ? $requestedPage : 'home';
+                    @endphp
+                        <a href="{{ route($routeName) }}" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Preview</a>
+                    </li>
+
+                    <li>
                         <a class="btn-login" href="{{ route('logout') }}">{{ __('Logout') }}</a>
                     </li>
                 </ul>

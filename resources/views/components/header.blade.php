@@ -1,4 +1,24 @@
 <div class="overlay"></div>
+
+@auth
+<header id="admin-headr" class="site-admin-top-header">
+  <div class="admin-left">
+    <span class="icon"> 
+          @php
+          $currentRouteName = Route::currentRouteName();
+    $routeName = Route::has($currentRouteName) ? $currentRouteName : 'home';
+    @endphp
+      <a href="{{ route('home') }}/admin/edit?page=<?= $routeName; ?>" class="custom-logo-link" rel="home" aria-current="page">✏️ Edit Page</a>
+    </span>
+  </div>
+  <div class="admin-right">
+    <span class="howdy">{{ Auth::user()->name }}</span>
+     <img class="avatar" src="https://avatar.iran.liara.run/public" alt="User Avatar">
+     &nbsp;
+    <div><a href="{{ route('logout') }}" class="logout-link">Logout</a></div>
+</header>
+@endauth
+
 <header id="masthead" class="site-header">
     <div class="container">
         <div class="header-wrapper">

@@ -6,6 +6,7 @@
 
         <section class="body-main">
             <div class="body-content">
+                <h2 class="page-title">{{ $page }}</h2>
                  @if (session('success'))
                     <div class="custom-toast success" id="toast-success">
                         <span>{{ session('success') }}</span>

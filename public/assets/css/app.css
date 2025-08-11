@@ -2080,3 +2080,10 @@ input[type="checkbox"]:checked+label:before {
 main {
 	background: #f6f7f8;
 }
+
+h2.page-title {
+    font-size: 30px;
+    text-transform: capitalize;
+    line-height: 30px;
+	margin-bottom: 15px;
+}

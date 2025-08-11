@@ -20,9 +20,9 @@ class AdminController extends Controller
         $page = $request->query('page', 'home');
 
         if (view()->exists("admin.{$page}")) {
-            return view("admin.{$page}", ['data' => $dataArray]);
+            return view("admin.{$page}", ['data' => $dataArray,'page'=>str_replace('-', ' ', $page)]);
         } else {
-            return view('admin.home', ['data' => $dataArray]);
+            return view('admin.home', ['data' => $dataArray, 'page'=>'Home']);
         }
 
     }

@@ -81,29 +81,62 @@ class AdminController extends Controller
             unset($validated['data']['features']);
         }  // if have to check if the 'data.features' key exists in the validated array
 
+
+         if (isset($validated['data']['contact_list']) && is_array($validated['data']['contact_list'])) {
+            $dataArray['contact_list'] = [];
+            foreach ($validated['data']['contact_list'] as $index => $conatctList) {
+                $contact_list_item = $conatctList['contact_list_item'] ?? null;
+                $contact_list_item_url = $conatctList['contact_list_item_url'] ?? null;
+                $oldimage = $conatctList['oldimage'] ?? null;
+                $fileKey = "data.contact_list.$index.image";
+                if ($request->hasFile($fileKey)) {
+                    $file = $request->file($fileKey);
+                    if ($file->isValid()) {
+                        $destinationPath = public_path('assets/images');
+                        if (!file_exists($destinationPath)) {
+                            mkdir($destinationPath, 0755, true);
+                        }
+                        $filename = time() . '_' . $file->getClientOriginalName();
+                        $file->move($destinationPath, $filename);
+                        $imageUrl = "assets/images/$filename";
+                    
+                            $dataArray['contact_list'][] = [
+                                'image' => $imageUrl,
+                                "contact_list_item" => $contact_list_item ,
+                                "contact_list_item_url" => $contact_list_item_url,
+                            ];
+                    }
+                } else {
+                          
+                        $dataArray['contact_list'][] = [
+                            'image' => $oldimage, // or default image path
+                            "contact_list_item" => $contact_list_item ,
+                            "contact_list_item_url" => $contact_list_item_url,
+                        ];
+                    
+                }
+            }
+             
+            unset($validated['data']['contact_list']);
+        } 
+
         foreach ($validated['data'] as $key => $value) {
             // Check if this key has a file upload
             if ($request->hasFile("data.$key")) {
                 $file = $request->file("data.$key");
-
                 if ($file->isValid()) {
                     // Define target directory
                     $destinationPath = public_path('assets/images');
-
                     // Create directory if it doesn't exist
                     if (!file_exists($destinationPath)) {
                         mkdir($destinationPath, 0755, true);
                     }
-
                     // Generate unique filename
                     $filename = time() . '_' . $file->getClientOriginalName();
-
                     // Move the file to public/assets/images
                     $file->move($destinationPath, $filename);
-
                     // Save the URL (not the path) into the JSON
                     $imageUrl = ("assets/images/$filename");
-
                     $dataArray[$key] = $imageUrl;
                 }
             } else {
@@ -114,12 +147,8 @@ class AdminController extends Controller
 
         // Encode back to JSON with pretty print
         $updatedJson = json_encode($dataArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-
         // Save to file
         file_put_contents($filePath, $updatedJson);
-
         return back()->with('success', 'Content updated successfully!');
-
     }
-
 }

@@ -48,7 +48,7 @@
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
                                                         <img id="preview-customizable-form-background"
-                                                            src="{{ asset('/') }}<?= $data['customizable_form_background_image']; ?>"
+                                                            src="{{ asset('/') }}<?= $data['customizable_forms_background_image']; ?>"
                                                             class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>

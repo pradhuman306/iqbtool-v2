@@ -20,8 +20,7 @@
                     </a>
                 </div>
                 <div class="iqb-hero-right">
-                    <img src="{{asset('/')}}<?= __('hero_banner_image'); ?>" alt="IQB Hero Banner"
-                        class="hero-image-class">
+                    <img src="{{asset('/')}}<?= __('hero_banner_image'); ?>" alt="IQB Hero Banner" class="hero-image-class">
                 </div>
             </div>
         </div>
@@ -96,8 +95,7 @@
                 </div>
                 <div class="iqb-tool-body">
                     <figure>
-                        <img src="{{asset('/')}}<?= __('form_solutions_image'); ?>" alt="IQB Tool Preview UI"
-                            class="">
+                        <img src="{{asset('/')}}<?= __('form_solutions_image'); ?>" alt="IQB Tool Preview UI" class="">
                     </figure>
                 </div>
             </div>
@@ -115,12 +113,12 @@
                 </div>
                 <div class="iqb-about-body row align-center justify-between">
                     <div class="iqb-about-left col-2">
-                   {!! __('about_iqb_details') !!}
+                        {!! __('about_iqb_details') !!}
                     </div>
                     <div class="iqb-about-right col-2">
                         <figure>
-                            <img src="{{asset('/')}}<?= __('about_iqb_image'); ?>" alt="iqb-tool-features-nl"
-                                class="" loading="lazy">
+                            <img src="{{asset('/')}}<?= __('about_iqb_image'); ?>" alt="iqb-tool-features-nl" class=""
+                                loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -139,13 +137,13 @@
                 </div>
                 <div class="iqb-features-body row">
                     <?php
-                    $features = __('features');
-                    foreach ($features as $key => $value) { ?>
+    $features = __('features');
+    foreach ($features as $key => $value) { ?>
                     <div class="iqb-features-list col-4">
                         <img src="{{asset('/')}}<?= $value['image']; ?>" alt="iqb report" class="" loading="lazy">
                         <p><?= $value['description']; ?></p>
                     </div>
-                  <?php }    ?>
+                    <?php }    ?>
                 </div>
                 <a href="{{ __('features_button_url') }}" class="btn btn-primary" target="_blank"
                     aria-label="{{ __('features_button_text') }}">{{ __('features_button_text') }}
@@ -169,9 +167,9 @@
                 <div class="iqb-testimonials-slider-wrapper">
                     <div class="iqb-testimonials-slider">
                         <div class="iqb-testimonials-body" style="transition: transform 0.5s; transform: translateX(0%);">
-                              <?php
-                    $testimonials = __('testimonials');
-                    foreach ($testimonials as $key => $value) { ?>
+                            <?php
+    $testimonials = __('testimonials');
+    foreach ($testimonials as $key => $value) { ?>
                             <div class="iqb-testimonials-item">
                                 <div class="iqb-testimonials-item-wrap">
                                     <p><?= $value['description']; ?></p>
@@ -181,7 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-       <?php }    ?>
+                            <?php }    ?>
                         </div>
                     </div>
                 </div>
@@ -201,13 +199,12 @@
                     <p>{{ __("faq_description") }}</p>
                 </div>
                 <div class="iqb-faqs-body">
-                      <?php
-                    $faq = __('faq');
-                    foreach ($faq as $key => $value) { ?>
+                    <?php
+    $faq = __('faq');
+    foreach ($faq as $key => $value) { ?>
                     <div class="iqb-faq-list <?= $key === 0 ? 'active' : ''; ?>">
                         <h3><?= $value['faq_question']; ?>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">
                                 <path d="M1 1L7.5 7.5L1 14" stroke="#0E0B3D" stroke-width="2"></path>
                             </svg>
                         </h3>
@@ -215,9 +212,10 @@
                             <p><?= $value['faq_answer']; ?></p>
                         </div>
                     </div>
-                           <?php }    ?>
+                    <?php }    ?>
                 </div>
-                <a href="https://login.iqb-tool.com/request-access" class="btn btn-primary" target="_blank">{{ __('Get more info') }}
+                <a href="https://login.iqb-tool.com/request-access" class="btn btn-primary"
+                    target="_blank">{{ __('Get more info') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">
                         <path d="M1 1L7.5 7.5L1 14" stroke="#fff" stroke-width="2"></path>
                     </svg>

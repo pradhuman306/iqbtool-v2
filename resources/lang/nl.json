@@ -60,19 +60,19 @@
     "features": [
         {
             "description": "Rapporten mogen geen onnodig kopiëren en plakken van inhoud bevatten.",
-            "image": "assets/images/1749019617_iqb-report.svg"
+            "image": "assets\/images\/1750230955_1749019723_iqb-report.svg"
         },
         {
             "description": "Vanuit onze unieke huisstijl presenteren wij de volgende lijn.",
-            "image": "assets/images/iqb-style.svg"
+            "image": "assets\/images\/iqb-style.svg"
         },
         {
             "description": "Ervaar de kracht van één klik: zowel een FML als een KFML gecombineerd.",
-            "image": "assets/images/iqb-export-report.svg"
+            "image": "assets\/images\/iqb-export-report.svg"
         },
         {
             "description": "Bespaar tijd met behulp van onze intelligente functies voor het maken van vragenlijsten.",
-            "image": "assets/images/iqb-save-time.svg"
+            "image": "assets\/images\/iqb-save-time.svg"
         }
     ],
     "testimonials_subheading": "Getuigenissen",
@@ -109,7 +109,15 @@
     "fmlkfml_subheading": "FML\/KFML",
     "fmlkfml_heading": "Slimme formulieren, afgestemd op uw behoeften",
     "fmlkfml_description": "Kies uit onze zorgvuldig ontworpen formulieren, gemaakt om aan uw specifieke eisen te voldoen en een naadloze pasvorm te garanderen.",
-    "customizable_form_background_image": "",
+    "fmlpage_description": "De FML is onderdeel van het CBBS, het schadebeoordelings- en zekerheidssysteem van het UWV. Dit systeem wordt gebruikt door verzekeringsartsen en arbeidsdeskundigen bij het UWV voor schadebeoordeling op grond van de arbeidsongeschiktheidswetgeving in Nederland.",
+    "fmlpage_button_text": "Ga nu aan de slag",
+    "fmlpage_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "fmlpage_image": "assets\/images\/1748949069_fml5-nl.svg",
+    "kfmlpage_description": "De FML geeft systematisch aan tot welke omvang, frequentie en\/of werkuren per dag een medewerker in staat is. Om te beoordelen of de medewerker geschikt is voor de functie, wordt het werkvermogen van de medewerker vergeleken met de eisen die de functie stelt.",
+    "kfmlpage_button_text": "Ga nu aan de slag",
+    "kfmlpage_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "kfmlpage_image": "assets\/images\/1748949069_fml4-nl.svg",
+    "customizable_forms_background_image": "assets\/images\/1749038641_1748948845_iqb-tool-preview-bg.svg",
     "customizable_form_subheading": "Aanpasbare Formulierenoplossingen",
     "customizable_form_heading": "Op maat gemaakt formulier voor u",
     "customizable_form_description": "Deel je wensen met ons, en wij creëren de perfecte formulierenoplossing die bij jouw visie past!",
@@ -122,43 +130,51 @@
     "Get 1 month extra": "Krijg 1 maand extra",
     "Month": "maand",
     "Year": "jaar",
-    "Trial": "Proef",
-    "Enjoy the ease of creating your own (K)FML": "Geniet van het gemak waarmee u uw eigen (K)FML.",
-    "Choose Trial": "Kies Proef",
-    "1 User": "1 Gebruiker",
-    "Access basic form & limited questionnaire features": "Toegang tot basisformulier en beperkt vragenlijst kenmerken",
-    "Email support for essential queries": "E-mailondersteuning voor essentieel vragen",
-    "Fair use policy applies": "Er is een Fair Use-beleid van toepassing",
-    "Most Popular": "Meest populair",
-    "SP\/Personal": "SP\/Persoonlijk",
-    "Ideal for those who frequently create (K)FMLs": "Ideaal voor wie regelmatig (K)FML's maken.",
-    "regularly": "regelmatig",
-    "Choose Personal": "Kies Persoonlijk",
-    "Includes 1 (K)FML per month": "Inclusief 1 (K)FML per maand",
-    "Access advanced form and pro questionnaire features": "Toegang tot geavanceerde formulieren en pro-vragenlijstfuncties",
-    "Generate PDFs reports with your brand identify": "Genereer PDF-rapporten met uw merkidentiteit",
-    "Business": "Bedrijf",
-    "For more than 2 users, contact us to explore your options": "Neem bij meer dan 2 gebruikers contact met ons op om uw mogelijkheden te verkennen.",
+    "trialPlan_heading": "Proef",
+    "trialPlan_description": "Geniet van het gemak waarmee u uw eigen (K)FML.",
+    "trialPlan_price": "00",
+    "trialPlan_button_text": "Kies Proef",
+    "trialPlan_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "trialPlan_details": "<ul class=\"description-list\">\r\n                                      <li>1 Gebruiker<\/li>\r\n                                    <li>Toegang tot basisformulier en beperkt vragenlijst kenmerken<\/li>\r\n                                    <li>E-mailondersteuning voor essentieel vragen<\/li>\r\n                                    <li>Er is een Fair Use-beleid van toepassing<\/li>\r\n                            <\/ul>",
+    "most_popular": "Meest populair",
+    "personalPlan_heading": "SP\/Persoonlijk",
+    "personalPlan_description": "Ideaal voor wie regelmatig (K)FML's maken.",
+    "personalPlan_price": "180",
+    "personalPlan_button_text": "Kies Persoonlijk",
+    "personalPlan_button_url": "https:\/\/login.iqb-tool.com\/request-access",
+    "personalPlan_details": "<ul class=\"description-list\">\r\n                                      <li>1 Gebruiker<\/li>\r\n                                    <li>Inclusief 1 (K)FML per maand<\/li>\r\n                                    <li>Toegang tot geavanceerde formulieren en pro-vragenlijstfuncties<\/li>\r\n                                    <li>E-mailondersteuning voor essentieel vragen<\/li>\r\n                                    <li>Er is een Fair Use-beleid van toepassing<\/li>\r\n                                    <li>Opties voor het aanpassen van formulieren<\/li>\r\n                                    <li>Genereer PDF-rapporten met uw merkidentiteit<\/li>\r\n                            <\/ul>",
+    "businessPlan_heading": "Bedrijf",
+    "businessPlan_description": "Neem bij meer dan 2 gebruikers contact met ons op om uw mogelijkheden te verkennen.",
+    "businessPlan_details": "<ul class=\"description-list\">\r\n                                      <li>Minimaal 2 gebruikers<\/li>\r\n                                    <li>Onbeperkte (K)FML-creatie per maand<\/li>\r\n                                    <li>Toegang tot geavanceerde formulieren en pro-vragenlijstfuncties<\/li>\r\n                                    <li>Prioriteitsmail voor essentieel vragen<\/li>\r\n                                    <li>Er is een Fair Use-beleid van toepassing<\/li>\r\n                                    <li>Opties voor het aanpassen van formulieren<\/li>\r\n                                    <li>Genereer PDF-rapporten met  uw merk identificeren<\/li>\r\n                                    <li>Geavanceerde rapportage en analyses<\/li>\r\n                            <\/ul>",
     "At least 2 users": "Minimaal 2 gebruikers",
-    "Unlimited (K)FML creation per month": "Onbeperkte (K)FML-creatie per maand",
-    "Priority email for essential queries": "Prioriteitsmail voor essentieel vragen",
-    "Advanced reporting and analytics": "Geavanceerde rapportage en analyses",
-    "Custom": "aangepast",
-    "Only create a few (K)FMLs per quarter or year? Contact us for a custom quote": "Maak slechts enkele (K)FML's per kwartaal of jaar? Neem contact met ons op voor een offerte op maat.",
-    "One or multiple users": "Eén of meerdere gebruikers",
-    "Custom-built (K)FML solutions to match your requirements": "Op maat gemaakte (K)FML oplossingen die bij uw passen vereisten",
-    "Flexible access based on your usage": "Flexibele toegang op basis van uw gebruik",
-    "Advanced form automation and integration options": "Geavanceerde formulierautomatisering en integratiemogelijkheden",
-    "24\/7 premium-ondersteuning": "24\/7 premium-ondersteuning",
-    "Many more": "Veel meer...",
-    "Get in touch with us": "Kom in contact ons",
-    "Get in touch Description": "Ontdek zelf wat IQB voor jouw en\/of je organisatie kan betekenen.",
+    "customPlan_heading": "aangepast",
+    "customPlan_description": "Maak slechts enkele (K)FML's per kwartaal of jaar? Neem contact met ons op voor een offerte op maat.",
+    "customPlan_details": "<ul class=\"description-list\">\r\n                                      <li>Eén of meerdere gebruikers<\/li>\r\n                                    <li>Op maat gemaakte (K)FML oplossingen die bij uw passen vereisten<\/li>\r\n                                    <li>Flexibele toegang op basis van uw gebruik<\/li>\r\n                                    <li>Geavanceerde formulierautomatisering en integratiemogelijkheden<\/li>\r\n                                    <li>Er is een Fair Use-beleid van toepassing<\/li>\r\n                                    <li>24\/7 premium-ondersteuning<\/li>\r\n                                    <li>Veel meer...<\/li>\r\n                            <\/ul>",
+    "contact_subheading": "Contact",
+    "contact_heading": "Kom in contact ons",
+    "contact_description": "Ontdek zelf wat IQB voor jouw en\/of je organisatie kan betekenen.",
+    "contact_list": [
+        {
+            "image": "assets\/images\/1750233114_icon-call.svg",
+            "contact_list_item": "+316 19 606 728",
+            "contact_list_item_url": "+316 19 606 728"
+        },
+        {
+            "image": "assets\/images\/1750233556_icon-email.svg",
+            "contact_list_item": "office@minebytes.com",
+            "contact_list_item_url": "office@minebytes.com"
+        },
+        {
+            "image": "assets\/images\/1750233599_icon-address.svg",
+            "contact_list_item": "Amsterdam, NL",
+            "contact_list_item_url": null
+        }
+    ],
     "Full Name": "Volledige naam",
     "Email Address": "E-mailadres",
     "Message": "Bericht",
     "Send a message": "Stuur een bericht",
     "Enter your full name": "Voer uw volledige naam in",
     "Enter your email address": "Voer uw e-mailadres in",
-    "Enter your message": "Voer uw bericht in",
-    "customizable_forms_background_image": "assets\/images\/1749038641_1748948845_iqb-tool-preview-bg.svg"
+    "Enter your message": "Voer uw bericht in"
 }

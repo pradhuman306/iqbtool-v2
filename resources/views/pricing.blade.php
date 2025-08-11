@@ -22,36 +22,28 @@
                 </div>
                 <div class="pricing-wrap">
                     <div class="pricing-box">
-                        <h4>{{ __('Trial') }}</h4>
-                        <p>{{ __('Enjoy the ease of creating your
-                            own (K)FML') }}</p>
+                        <h4>{{ __('trialPlan_heading') }}</h4>
+                        <p>{{ __('trialPlan_description') }}</p>
                         <div class="price-wrap">
-                            <span class="price-sign">€<span id="price_trial">0</span></span> <span class="duration"> /
+                            <span class="price-sign">€<span id="price_trial">{{ __('trialPlan_price') }}</span></span> <span class="duration"> /
                                 {{ __('Year') }}</span>
                         </div>
-                        <a href="https://login.iqb-tool.com/request-access" class="btn" target="_self"
-                            aria-label="Choose Trial">{{ __('Choose Trial') }}
+                        <a href="{{ __('trialPlan_button_url') }}" class="btn" target="_self"
+                            aria-label="Choose Trial">{{ __('trialPlan_button_text') }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">
                                 <path d="M1 1L7.5 7.5L1 14" stroke="#fff" stroke-width="2"></path>
                             </svg>
                         </a>
                         <div>
-                            <ul class="description-list">
-                                <li>{{ __('1 User') }}</li>
-                                <li>{{ __('Access basic form & limited
-                                    questionnaire features') }}</li>
-                                <li>{{ __('Email support for essential
-                                    queries') }}</li>
-                                <li>{{ __('Fair use policy applies') }}</li>
-                            </ul>
+                           {!! __('trialPlan_details') !!}
                         </div>
                     </div>
                     <div class="pricing-box most-popular-box">
-                        <span class="most-populor-tag">{{ __('Most Popular') }}</span>
-                        <h4>{{ __('SP/Personal') }}</h4>
-                        <p>{{ __('Ideal for those who frequently create (K)FMLs') }}</p>
+                        <span class="most-populor-tag">{{ __('most_popular') }}</span>
+                        <h4>{{ __('personalPlan_heading') }}</h4>
+                        <p>{{ __('personalPlan_description') }}</p>
                         <div class="price-wrap">
-                            <span class="price-sign">€<span data-price="15" id="price_personal">180</span></span> <span
+                            <span class="price-sign">€<span data-price="15" id="price_personal">{{ __('personalPlan_price') }}</span></span> <span
                                 class="duration"> / {{ __('Year') }}</span>
                             <span id="regular-dis-wrap">
                                 <span class="regular-dis">
@@ -62,53 +54,28 @@
                             </span>
                             <span id="personal_discount_text" style="display:none">{{ __('regularly') }}</span>
                         </div>
-                        <a href="https://login.iqb-tool.com/request-access" class="btn" target="_self"
-                            aria-label="Choose Personal">{{ __('Choose Personal') }}
+                        <a href="{{ __('personalPlan_button_url') }}" class="btn" target="_self"
+                            aria-label="Choose Personal">{{ __('personalPlan_button_text') }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 15" fill="none">
                                 <path d="M1 1L7.5 7.5L1 14" stroke="#fff" stroke-width="2"></path>
                             </svg>
                         </a>
                         <div>
-                            <ul class="description-list">
-                                <li>{{ __('1 User') }}</li>
-                                <li>{{ __('Includes 1 (K)FML per month') }}</li>
-                                <li>{{ __('Access advanced form and pro questionnaire features') }}</li>
-                                <li>{{ __('Email support for essential queries') }}</li>
-                                <li>{{ __('Fair use policy applies') }}</li>
-                                <li>{{ __('Email support for essential queries') }}</li>
-                                <li>{{ __('Generate PDFs reports with your brand identify') }}</li>
-                            </ul>
+                           {!! __('personalPlan_details') !!}
                         </div>
                     </div>
                     <div class="pricing-box">
-                        <h4>{{ __('Business') }}</h4>
-                        <p>{{ __('For more than 2 users, contact us to explore your options') }}</p>
+                        <h4>{{ __('businessPlan_heading') }}</h4>
+                        <p>{{ __('businessPlan_description') }}</p>
                         <div>
-                            <ul class="description-list">
-                                <li>{{ __('At least 2 users') }}</li>
-                                <li>{{ __('Unlimited (K)FML creation per month') }}</li>
-                                <li>{{ __('Access advanced form and pro questionnaire features') }}</li>
-                                <li>{{ __('Priority email for essential queries') }}</li>
-                                <li>{{ __('Fair use policy applies') }}</li>
-                                <li>{{ __('Email support for essential queries') }}</li>
-                                <li>{{ __('Generate PDFs reports with your brand identify') }}</li>
-                                <li>{{ __('Advanced reporting and analytics') }}</li>
-                            </ul>
+                            {!! __('businessPlan_details') !!}
                         </div>
                     </div>
                     <div class="pricing-box">
-                        <h4>{{ __('Custom') }}</h4>
-                        <p>{{ __('Only create a few (K)FMLs per quarter or year? Contact us for a custom quote') }}</p>
+                        <h4>{{ __('customPlan_heading') }}</h4>
+                        <p>{{ __('customPlan_description') }}</p>
                         <div>
-                            <ul class="description-list">
-                                <li>{{ __('One or multiple users') }}</li>
-                                <li>{{ __('Custom-built (K)FML solutions to match your requirements') }}</li>
-                                <li>{{ __('Flexible access based on your usage') }}</li>
-                                <li>{{ __('Advanced form automation and integration options') }}</li>
-                                <li>{{ __('Fair use policy applies') }}</li>
-                                <li>{{ __('24/7 premium-ondersteuning') }}</li>
-                                <li>{{ __('Many more') }}</li>
-                            </ul>
+                             {!! __('customPlan_details') !!}
                         </div>
                     </div>
                 </div>

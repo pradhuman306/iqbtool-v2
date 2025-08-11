@@ -69,7 +69,7 @@
                                             <div class="form-group mb-3">
                                                 <label for="">FML Description</label>
                                                 <textarea type="text" class="form-control"
-                                                    name="data[fml_description]"><?= $data['fml_description']; ?></textarea>
+                                                    name="data[fmlpage_description]"><?= $data['fmlpage_description']; ?></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -77,15 +77,15 @@
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
                                                         <label for="">FML Button Text</label>
-                                                        <input type="text" class="form-control" name="data[fml_button_text]"
-                                                            value="<?= $data['fml_button_text']; ?>">
+                                                        <input type="text" class="form-control" name="data[fmlpage_button_text]"
+                                                            value="<?= $data['fmlpage_button_text']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="">FML Button Url</label>
-                                                        <input type="text" class="form-control" name="data[fml_button_url]"
-                                                            value="<?= $data['fml_button_url']; ?>">
+                                                        <input type="text" class="form-control" name="data[fmlpage_button_url]"
+                                                            value="<?= $data['fmlpage_button_url']; ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,7 +97,7 @@
                                                         <label for="fml-image-upload">FML Image</label><br />
                                                         <div class="upload-box">
                                                             <span>Click or drag image to upload</span>
-                                                            <input type="file" id="fml-image-upload" name="data[fml_image]"
+                                                            <input type="file" id="fml-image-upload" name="data[fmlpage_image]"
                                                                 accept="image/*" />
                                                         </div>
                                                     </div>
@@ -106,7 +106,7 @@
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
                                                         <img id="preview-fml"
-                                                            src="{{ asset('/') }}<?= $data['fml_image']; ?>"
+                                                            src="{{ asset('/') }}<?= $data['fmlpage_image']; ?>"
                                                             class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>
@@ -125,7 +125,7 @@
                                             <div class="form-group mb-3">
                                                 <label for="">KFML Description</label>
                                                 <textarea type="text" class="form-control"
-                                                    name="data[kfml_description]"><?= $data['kfml_description']; ?></textarea>
+                                                    name="data[kfmlpage_description]"><?= $data['kfmlpage_description']; ?></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -134,15 +134,15 @@
                                                     <div class="form-group mb-3">
                                                         <label for="">KFML Button Text</label>
                                                         <input type="text" class="form-control"
-                                                            name="data[kfml_button_text]"
-                                                            value="<?= $data['kfml_button_text']; ?>">
+                                                            name="data[kfmlpage_button_text]"
+                                                            value="<?= $data['kfmlpage_button_text']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="">KFML Button Url</label>
-                                                        <input type="text" class="form-control" name="data[kfml_button_url]"
-                                                            value="<?= $data['kfml_button_url']; ?>">
+                                                        <input type="text" class="form-control" name="data[kfmlpage_button_url]"
+                                                            value="<?= $data['kfmlpage_button_url']; ?>">
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,7 +155,7 @@
                                                         <div class="upload-box">
                                                             <span>Click or drag image to upload</span>
                                                             <input type="file" id="kfml-image-upload"
-                                                                name="data[kfml_image]" accept="image/*" />
+                                                                name="data[kfmlpage_image]" accept="image/*" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -163,7 +163,7 @@
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
                                                         <img id="preview-kfml"
-                                                            src="{{ asset('/') }}<?= $data['kfml_image']; ?>"
+                                                            src="{{ asset('/') }}<?= $data['kfmlpage_image']; ?>"
                                                             class="preview-img" alt="Image Preview" />
                                                     </div>
                                                 </div>

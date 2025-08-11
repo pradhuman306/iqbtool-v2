@@ -2,11 +2,11 @@
 @section('title', 'Pricing')
 @section('content')
     <div>
-                  @include('components.adminsidebar')
+        @include('components.adminsidebar')
 
         <section class="body-main">
             <div class="body-content">
-                  @if (session('success'))
+                @if (session('success'))
                     <div class="custom-toast success" id="toast-success">
                         <span>{{ session('success') }}</span>
                     </div>
@@ -56,29 +56,195 @@
                                                     name="data[pricing_description]"><?= $data['pricing_description']; ?></textarea>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-content-section mt-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="mb-4">Trial Plan Section</h2>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Trial Plan Heading</label>
+                                                <input type="text" class="form-control" name="data[trialPlan_heading]"
+                                                    value="<?= $data['trialPlan_heading']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Trial Plan Description</label>
+                                                <textarea type="text" class="form-control"
+                                                    name="data[trialPlan_description]"><?= $data['trialPlan_description']; ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Trial Plan Price</label>
+                                                <input type="text" class="form-control"
+                                                    name="data[trialPlan_price]" value="<?= $data['trialPlan_price']; ?>">
+                                            </div>
+                                        </div>
                                         <div class="col-12">
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label for="customizable-form-image-upload">Customizable Form
-                                                            Image</label><br />
-                                                        <div class="upload-box">
-                                                            <span>Click or drag image to upload</span>
-                                                            <input type="file" id="customizable-form-image-upload"
-                                                                name="data[customizable_form_image]" accept="image/*" />
-                                                        </div>
+                                                        <label for="">Trial Plan Button Text</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[trialPlan_button_text]"
+                                                            value="<?= $data['trialPlan_button_text']; ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group mb-3">
-                                                        <label>Preview Image</label><br />
-                                                        <img id="preview-customizable-form-image"
-                                                            src="{{ asset('/') }}<?= $data['customizable_form_image']; ?>"
-                                                            class="preview-img" alt="Image Preview" />
+                                                        <label for="">Trial Plan Button Url</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[trialPlan_button_url]"
+                                                            value="<?= $data['trialPlan_button_url']; ?>">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Trial Plan Details</label>
+                                                <textarea name="data[trialPlan_details]"
+                                                    id="editor1"><?= $data['trialPlan_details']; ?></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="page-content-section mt-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="mb-4">Personal Plan Section</h2>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Personal Plan Heading</label>
+                                                <input type="text" class="form-control" name="data[personalPlan_heading]"
+                                                    value="<?= $data['personalPlan_heading']; ?>">
+                                            </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label for="">Most Popular</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[most_popular]"
+                                                            value="<?= $data['most_popular']; ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Personal Plan Description</label>
+                                                <textarea type="text" class="form-control"
+                                                    name="data[personalPlan_description]"><?= $data['personalPlan_description']; ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Personal Plan Price</label>
+                                                <input type="text" class="form-control"
+                                                    name="data[personalPlan_price]" value="<?= $data['personalPlan_price']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label for="">Personal Plan Button Text</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[personalPlan_button_text]"
+                                                            value="<?= $data['personalPlan_button_text']; ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group mb-3">
+                                                        <label for="">Personal Plan Button Url</label>
+                                                        <input type="text" class="form-control"
+                                                            name="data[personalPlan_button_url]"
+                                                            value="<?= $data['personalPlan_button_url']; ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Personal Plan Details</label>
+                                                <textarea name="data[personalPlan_details]"
+                                                    id="editor2"><?= $data['personalPlan_details']; ?></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="page-content-section mt-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="mb-4">Business Plan Section</h2>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Business Plan Heading</label>
+                                                <input type="text" class="form-control" name="data[businessPlan_heading]"
+                                                    value="<?= $data['businessPlan_heading']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Business Plan Description</label>
+                                                <textarea type="text" class="form-control"
+                                                    name="data[businessPlan_description]"><?= $data['businessPlan_description']; ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Business Plan Details</label>
+                                                <textarea name="data[businessPlan_details]"
+                                                    id="editor3"><?= $data['businessPlan_details']; ?></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="page-content-section mt-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="mb-4">Custom Plan Section</h2>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Custom Plan Heading</label>
+                                                <input type="text" class="form-control" name="data[customPlan_heading]"
+                                                    value="<?= $data['customPlan_heading']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Custom Plan Description</label>
+                                                <textarea type="text" class="form-control"
+                                                    name="data[customPlan_description]"><?= $data['customPlan_description']; ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb-3">
+                                                <label for="">Custom Plan Details</label>
+                                                <textarea name="data[customPlan_details]"
+                                                    id="editor4"><?= $data['customPlan_details']; ?></textarea>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -107,27 +273,17 @@
             const editor1 = new RichTextEditor("#editor1", editorConfig);
         }
 
-        function setupImagePreview(fileInputId, previewImageId) {
-            const input = document.getElementById(fileInputId);
-            const preview = document.getElementById(previewImageId);
-
-            input.addEventListener('change', function (e) {
-                const file = e.target.files[0];
-                if (file && file.type.startsWith('image/')) {
-                    const reader = new FileReader();
-                    reader.onload = function (evt) {
-                        preview.src = evt.target.result;
-                        preview.style.display = 'block';
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
+         if (document.querySelector('#editor2')) {
+            const editor2 = new RichTextEditor("#editor2", editorConfig);
         }
 
-        // Setup previews for each input
-        setupImagePreview('customizable-form-background-upload', 'preview-customizable-form-background');
-        setupImagePreview('customizable-form-image-upload', 'preview-customizable-form-image');
+          if (document.querySelector('#editor3')) {
+            const editor3 = new RichTextEditor("#editor3", editorConfig);
+        }
 
+          if (document.querySelector('#editor4')) {
+            const editor4 = new RichTextEditor("#editor4", editorConfig);
+        }
 
     </script>
 @endsection

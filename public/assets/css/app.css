@@ -1865,7 +1865,7 @@ input[type="checkbox"]:checked+label:before {
 }
 
 .nav-list li.active a {
-    background: #f2f2f3;
+	background: #f2f2f3;
 }
 
 .body-main {
@@ -1953,7 +1953,8 @@ input[type="checkbox"]:checked+label:before {
 
 .row.iqb-feature-item,
 .row.iqb-testimonials-item,
-.row.iqb-faq-item {
+.row.iqb-faq-item,
+.row.contact-item {
 	padding: 15px 10px;
 	background: #f6f7f8;
 	border-radius: 10px;
@@ -1962,7 +1963,8 @@ input[type="checkbox"]:checked+label:before {
 
 .row.iqb-feature-item+.row.iqb-feature-item,
 .row.iqb-testimonials-item+.row.iqb-testimonials-item,
-.row.iqb-faq-item+.row.iqb-faq-item {
+.row.iqb-faq-item+.row.iqb-faq-item,
+.row.contact-item+.row.contact-item {
 	margin-top: 10px;
 }
 
@@ -2030,44 +2032,51 @@ input[type="checkbox"]:checked+label:before {
 
 /* admin css  */
 .site-admin-top-header {
-  background-color: #23282d;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 32px;
-  padding: 0 15px;
-  font-size: 13px;
-  font-family: Arial, sans-serif;
+	background-color: #23282d;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 32px;
+	padding: 0 15px;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
 }
 
-.admin-left span, .admin-left span a {
-  margin-right: 15px;
-  display: inline-block;
-  line-height: 32px;
-  color: #fff;
+.admin-left span,
+.admin-left span a {
+	margin-right: 15px;
+	display: inline-block;
+	line-height: 32px;
+	color: #fff;
 }
 
 .admin-left .logo {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .admin-right {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .admin-right .howdy {
-  margin-right: 8px;
-  text-transform: capitalize;
+	margin-right: 8px;
+	text-transform: capitalize;
 }
 
 .admin-right .avatar {
-  width: 20px;
-  height: 20px;
-  border-radius: 2px;
+	width: 20px;
+	height: 20px;
+	border-radius: 2px;
 }
+
 .admin-right .logout-link {
-  color: #fff;
-  text-decoration: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+.site-main,
+main {
+	background: #f6f7f8;
 }

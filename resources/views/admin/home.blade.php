@@ -3,8 +3,7 @@
 @section('content')
 
     <div>
-                  @include('components.adminsidebar')
-
+        @include('components.adminsidebar')
         <section class="body-main">
             <div class="body-content">
                 @if (session('success'))
@@ -12,7 +11,6 @@
                         <span>{{ session('success') }}</span>
                     </div>
                 @endif
-
                 @if ($errors->any())
                     <div class="custom-toast error" id="toast-error">
                         <ul>
@@ -495,8 +493,8 @@
                                                             <input type="file" id="useful-features-image-upload"
                                                                 name="data[features][<?= $key; ?>][image]"
                                                                 accept="image/*" />
-
-                                                            <input type="hidden" value="<?= $value['image']; ?>" name="data[features][<?= $key; ?>][oldimage]"/>
+                                                            <input type="hidden" value="<?= $value['image']; ?>"
+                                                                name="data[features][<?= $key; ?>][oldimage]" />
 
                                                         </div>
                                                     </div>

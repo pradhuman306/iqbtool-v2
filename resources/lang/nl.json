@@ -176,5 +176,10 @@
     "Send a message": "Stuur een bericht",
     "Enter your full name": "Voer uw volledige naam in",
     "Enter your email address": "Voer uw e-mailadres in",
-    "Enter your message": "Voer uw bericht in"
+    "Enter your message": "Voer uw bericht in",
+    "main_logo": "assets\/images\/logo.svg",
+    "CTA_URL": "https:\/\/login.iqb-tool.com\/request-access",
+    "footer_email": "office@minebytes.com",
+    "Header":"koptekst",
+    "Footer":"voettekst"
 }

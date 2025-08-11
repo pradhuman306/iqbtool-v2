@@ -180,7 +180,7 @@
                                                     <div class="form-group mb-3">
                                                         <label>Preview Image</label><br />
                                                         <img class="preview-img" name="data[preview]" src=""
-                                                            style="max-height: 100px;" alt="Image Preview" />
+                                                            style="max-height: 100px; display:none" alt="Image Preview" />
                                                     </div>
                                                 </div>
                                             </div>

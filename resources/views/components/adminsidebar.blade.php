@@ -6,6 +6,19 @@
                         $currentPage = request()->query('page', 'home');
                     @endphp
                     <ul class="nav-list">
+                        {{-- header  --}}
+                          <li class="{{ $currentPage == 'header' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=header">
+                                <span>{{__('Header')}}</span>
+                            </a>
+                        </li>
+                        {{-- footer  --}}
+                          <li class="{{ $currentPage == 'footer' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}/admin/edit?page=footer">
+                                <span>{{__('Footer')}}</span>
+                            </a>
+                        </li>
+
                         <!-- Home -->
                         <li class="{{ $currentPage == 'home' ? 'active' : '' }}">
                             <a href="{{ route('home') }}/admin/edit?page=home">

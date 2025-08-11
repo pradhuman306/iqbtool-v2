@@ -177,12 +177,12 @@
         {
             "image": "assets\/images\/1750233768_icon-email.svg",
             "contact_list_item": "office@minebytes.com",
-            "contact_list_item_url": null
+            "contact_list_item_url": "office@minebytes.com"
         },
         {
             "image": "assets\/images\/1750233599_icon-address.svg",
             "contact_list_item": "Amsterdam, NL",
-            "contact_list_item_url": null
+            "contact_list_item_url": "Amsterdam, NL"
         }
     ],
     "Full Name": "Full Name",
@@ -191,5 +191,10 @@
     "Send a message": "Send a message",
     "Enter your full name": "Enter your full name",
     "Enter your email address": "Enter your email address",
-    "Enter your message": "Enter your message"
+    "Enter your message": "Enter your message",
+    "main_logo": "assets\/images\/logo.svg",
+    "CTA_URL": "https:\/\/login.iqb-tool.com\/request-access",
+    "footer_email": "office@minebytes.com",
+    "Header":"Header",
+    "Footer":"Footer"
 }

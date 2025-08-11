@@ -25,7 +25,7 @@
             <div class="header-items-left">
                 <div class="site-branding">
                     <a href="{{ route('home') }}" class="custom-logo-link" rel="home" aria-current="page">
-                        <img src="{{ asset('assets/images/logo.svg') }}" class="custom-logo" alt="IQB Logo">
+                        <img src="{{ asset(__('main_logo')) }}" class="custom-logo" alt="IQB Logo">
                     </a>
                 </div><!-- .site-branding -->
                <ul class="iqb-lang-switcher">

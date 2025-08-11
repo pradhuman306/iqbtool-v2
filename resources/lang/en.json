@@ -196,5 +196,21 @@
     "CTA_URL": "https:\/\/login.iqb-tool.com\/request-access",
     "footer_email": "office@minebytes.com",
     "Header":"Header",
-    "Footer":"Footer"
+    "Footer":"Footer",
+    "home_page_title":"IQB Tool – More with Less | Quick and easy",
+    "home_page_subtitle":"IQB Tool – More with Less | Quick and easy",
+    "fml_page_title": "IQB-tool – Smart forms tailored to your needs",
+    "fml_page_subtitle": "Kies uit onze zorgvuldig ontworpen formulieren, gemaakt om aan uw specifieke eisen te voldoen en een naadloze pasvorm te garanderen.",
+    "custom_form_page_title": "IQB-tool – We offer tailored forms just for you",
+    "custom_form_page_subtitle": "Deel je wensen met ons, en wij creëren de perfecte formulierenoplossing die bij jouw visie past!",
+    "price_page_title": "IQB-tool – Simple and transparent pricing",
+    "price_page_subtitle": "Prijzen die de groei van uw bedrijf volgen, dus dat zult u ook doen betaal nooit meer wat u nodig heeft.",
+    "contact_page_title": "IQB-tool – Get in touch with us",
+    "contact_page_subtitle": "Ontdek zelf wat IQB voor jouw en/of je organisatie kan betekenen.",
+    "terms_page_title": "IQB-tool – Terms and Conditions",
+    "terms_page_subtitle": "These Terms and Conditions explain the rules you need to follow when using our services. Our goal is to create a seamless experience, and these terms are here to protect both you and us.",
+    "privacy_page_title": "IQB-tool – Privacy Policy",
+    "privacy_page_subtitle": "This Privacy Policy outlines how we collect, use, and safeguard your information when you interact with our website and services.",
+    "cookie_page_title": "IQB-tool – Cookie Policy",
+    "cookie_page_subtitle": "We use cookies to make your experience smoother and more personalized. This Cookie Policy explains what cookies are, how we use them, and your choices regarding cookies."
 }

@@ -1,5 +1,6 @@
 @extends("layouts.app")
-@section('title', 'Privacy Policy')
+@section('title', __('privacy_page_title'))
+@section('description', __('privacy_page_subtitle'))
 @section('content')
     <div class="gradient-inner page-template-default">
         <div class="container">

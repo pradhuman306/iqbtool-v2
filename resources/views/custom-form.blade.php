@@ -1,5 +1,6 @@
 @extends("layouts.app")
-@section('title', 'Custom Form')
+@section('title', __('custom_form_page_title'))
+@section('description', __('custom_form_page_subtitle'))
 @section('content')
     <div class="gradient-inner">
         <div class="container">

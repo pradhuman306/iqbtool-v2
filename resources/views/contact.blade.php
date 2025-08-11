@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Contact')
+@section('title', __('contact_page_title'))
+@section('description', __('contact_page_subtitle'))
 @section('content')
     <div class="gradient-inner">
         <div class="container">

@@ -82,6 +82,7 @@ body {
 	font-family: 'Inter', Tahoma, sans-serif;
 	line-height: var(--line-height-base);
 	font-size: var(--font-size-small);
+    background: #fff;
 }
 
 textarea.form-control {
@@ -139,6 +140,11 @@ a {
 section {
 	padding: var(--spacing-large) 0;
 	overflow-x: hidden;
+    background: #fff;
+}
+
+section.iqb-contact{
+	background: transparent;
 }
 
 /* need to update variable */

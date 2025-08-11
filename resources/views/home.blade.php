@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', __('home_page_title'))
+@section('description', __('home_page_subtitle'))
 
 @section('content')
     <!-- Hero Section Starts -->

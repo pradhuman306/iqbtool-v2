@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>@yield('title', 'Page')</title>
-    <meta name="description" content="">
+    <meta name="description" content="@yield('description', 'Page')">
 
     <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" sizes="32x32">
     <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" sizes="192x192">

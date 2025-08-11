@@ -341,7 +341,7 @@
 }
 	.overlay {
     background: rgb(0 0 0 / 60%);
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
   	opacity:0;

@@ -1,5 +1,6 @@
 @extends("layouts.app")
-@section('title', 'Cookie Policy')
+@section('title', __('cookie_page_title'))
+@section('description', __('cookie_page_subtitle'))
 @section('content')
     <div class="gradient-inner page-template-default">
         <div class="container">

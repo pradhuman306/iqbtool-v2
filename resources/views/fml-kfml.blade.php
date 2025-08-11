@@ -1,5 +1,7 @@
 @extends("layouts.app")
-@section('title', 'FML/KFML')
+@section('title', __('fml_page_title'))
+@section('description', __('fml_page_subtitle'))
+
 @section('content')
     <div class="gradient-inner">
         <div class="container">

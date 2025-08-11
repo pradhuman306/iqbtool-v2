@@ -1,5 +1,6 @@
 @extends("layouts.app")
-@section('title', 'Terms and Conditions')
+@section('title', __('terms_page_title'))
+@section('description', __('terms_page_subtitle'))
 @section('content')
     <div class="gradient-inner page-template-default">
         <div class="container">
